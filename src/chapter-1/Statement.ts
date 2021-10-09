@@ -12,7 +12,7 @@ export default function statement (invoice: Invoice, plays: Play) {
             minimumFractionDigits: 2 }).format;
 
     for (let perf of invoice.performances) {
-        const play = plays[perf.playID];
+        const play = playsFor(perf);
         let thisAmount = amountFor(perf, play);
         // add volume credits
         volumeCredits += Math.max(perf.audience - 30, 0);
@@ -25,6 +25,10 @@ export default function statement (invoice: Invoice, plays: Play) {
     result += `Amount owed is ${format(totalAmount/100)}\n`;
     result += `You earned ${volumeCredits} credits\n`;
     return result;
+
+    function playsFor(p: Performance) {
+        return plays[p.playID];
+    }
 }
 
 function amountFor(performance: Performance, play: { name: string, type: PlayType }): number {
