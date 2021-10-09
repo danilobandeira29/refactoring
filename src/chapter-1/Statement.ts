@@ -12,7 +12,7 @@ export default function statement (invoice: Invoice, plays: Play) {
             minimumFractionDigits: 2 }).format;
 
     for (let perf of invoice.performances) {
-        let thisAmount = amountFor(perf, playsFor(perf));
+        let thisAmount = amountFor(perf);
         // add volume credits
         volumeCredits += Math.max(perf.audience - 30, 0);
         // add extra credit for every ten comedy attendees
@@ -28,26 +28,28 @@ export default function statement (invoice: Invoice, plays: Play) {
     function playsFor(p: Performance) {
         return plays[p.playID];
     }
+
+    function amountFor(performance: Performance): number {
+        let amount = 0;
+        switch (playsFor(performance).type) {
+            case PlayType.TRAGEDY:
+                amount = 40000;
+                if (performance.audience > 30) {
+                    amount += 1000 * (performance.audience - 30);
+                }
+                break;
+            case "comedy":
+                amount = 30000;
+                if (performance.audience > 20) {
+                    amount += 10000 + 500 * (performance.audience - 20);
+                }
+                amount += 300 * performance.audience;
+                break;
+            default:
+                throw new Error(`unknown type: ${playsFor(performance).type}`);
+        }
+        return amount;
+    }
+
 }
 
-function amountFor(performance: Performance, play: { name: string, type: PlayType }): number {
-    let amount = 0;
-    switch (play.type) {
-        case PlayType.TRAGEDY:
-            amount = 40000;
-            if (performance.audience > 30) {
-                amount += 1000 * (performance.audience - 30);
-            }
-            break;
-        case "comedy":
-            amount = 30000;
-            if (performance.audience > 20) {
-                amount += 10000 + 500 * (performance.audience - 20);
-            }
-            amount += 300 * performance.audience;
-            break;
-        default:
-            throw new Error(`unknown type: ${play.type}`);
-    }
-    return amount;
-}
