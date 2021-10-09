@@ -12,14 +12,13 @@ export default function statement (invoice: Invoice, plays: Play) {
             minimumFractionDigits: 2 }).format;
 
     for (let perf of invoice.performances) {
-        const play = playsFor(perf);
-        let thisAmount = amountFor(perf, play);
+        let thisAmount = amountFor(perf, playsFor(perf));
         // add volume credits
         volumeCredits += Math.max(perf.audience - 30, 0);
         // add extra credit for every ten comedy attendees
-        if (PlayType.COMEDY === play.type) volumeCredits += Math.floor(perf.audience / 5);
+        if (PlayType.COMEDY === playsFor(perf).type) volumeCredits += Math.floor(perf.audience / 5);
         // print line for this order
-        result += ` ${play.name}: ${format(thisAmount/100)} (${perf.audience} seats)\n`;
+        result += ` ${playsFor(perf).name}: ${format(thisAmount/100)} (${perf.audience} seats)\n`;
         totalAmount += thisAmount;
     }
     result += `Amount owed is ${format(totalAmount/100)}\n`;
