@@ -13,14 +13,19 @@ export default function statement (invoice: Invoice, plays: Play) {
         totalAmount += amountFor(perf);
     }
 
-    let volumeCredits = 0;
-    for (let perf of invoice.performances) {
-        volumeCredits += volumeCreditsFor(perf)
-    }
+    let volumeCredits = volumeCredit();
 
     result += `Amount owed is ${usd(totalAmount)}\n`;
     result += `You earned ${volumeCredits} credits\n`;
     return result;
+
+    function volumeCredit() {
+        let volumeCredits = 0;
+        for (let perf of invoice.performances) {
+            volumeCredits += volumeCreditsFor(perf)
+        }
+        return volumeCredits;
+    }
 
     function usd(value: number): string {
         return new Intl.NumberFormat("en-US",
