@@ -4,10 +4,13 @@ import { PlayType } from "./interfaces/PlayType";
 import Performance from "./interfaces/Performance";
 
 export default function statement (invoice: Invoice, plays: Play) {
+    return renderPlainText(invoice, plays);
+}
+
+function renderPlainText(invoice: Invoice, plays: Play) {
     let result = `Statement for ${invoice.customer}\n`;
 
     for (let perf of invoice.performances) {
-        // print line for this order
         result += ` ${playsFor(perf).name}: ${usd(amountFor(perf))} (${perf.audience} seats)\n`;
     }
 
@@ -68,6 +71,4 @@ export default function statement (invoice: Invoice, plays: Play) {
         }
         return amount;
     }
-
 }
-
