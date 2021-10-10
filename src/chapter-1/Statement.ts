@@ -1,7 +1,7 @@
 import Invoice from "./interfaces/Invoice";
 import Play from "./interfaces/Plays";
 import Statement from "./interfaces/Statement";
-import createStatement from "./createStatement";
+import createStatement from "./CreateStatement";
 
 export default function htmlStatement (invoice: Invoice, plays: Play) {
     return renderHtml(createStatement(invoice, plays));
