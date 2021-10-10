@@ -4,13 +4,16 @@ import { PlayType } from "./interfaces/PlayType";
 import Performance from "./interfaces/Performance";
 
 export default function statement (invoice: Invoice, plays: Play) {
-    return renderPlainText(invoice, plays);
+    const statement: Invoice = {} as Invoice;
+    statement.customer = invoice.customer;
+    statement.performances = invoice.performances;
+    return renderPlainText(statement, plays);
 }
 
-function renderPlainText(invoice: Invoice, plays: Play) {
-    let result = `Statement for ${invoice.customer}\n`;
+function renderPlainText(statement: Invoice, plays: Play) {
+    let result = `Statement for ${statement.customer}\n`;
 
-    for (let perf of invoice.performances) {
+    for (let perf of statement.performances) {
         result += ` ${playsFor(perf).name}: ${usd(amountFor(perf))} (${perf.audience} seats)\n`;
     }
 
@@ -20,7 +23,7 @@ function renderPlainText(invoice: Invoice, plays: Play) {
 
     function totalAmount() {
         let totalAmount = 0;
-        for (let perf of invoice.performances) {
+        for (let perf of statement.performances) {
             totalAmount += amountFor(perf);
         }
         return totalAmount;
@@ -28,7 +31,7 @@ function renderPlainText(invoice: Invoice, plays: Play) {
 
     function volumeCredit() {
         let volumeCredits = 0;
-        for (let perf of invoice.performances) {
+        for (let perf of statement.performances) {
             volumeCredits += volumeCreditsFor(perf)
         }
         return volumeCredits;
