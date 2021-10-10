@@ -13,10 +13,8 @@ export default function statement (invoice: Invoice, plays: Play) {
         totalAmount += amountFor(perf);
     }
 
-    let volumeCredits = volumeCredit();
-
     result += `Amount owed is ${usd(totalAmount)}\n`;
-    result += `You earned ${volumeCredits} credits\n`;
+    result += `You earned ${volumeCredit()} credits\n`;
     return result;
 
     function volumeCredit() {
