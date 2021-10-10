@@ -8,4 +8,5 @@ export default interface Performance {
         type: PlayType;
     }
     amount: number;
+    volumeCredits: number;
 }

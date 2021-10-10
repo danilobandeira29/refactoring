@@ -13,6 +13,7 @@ export default function statement (invoice: Invoice, plays: Play) {
         const performance: Performance = { ...aPerformance };
         performance.play = playsFor(performance);
         performance.amount = amountFor(performance);
+        performance.volumeCredits = volumeCreditsFor(performance);
         return performance;
     }
 
@@ -42,6 +43,12 @@ export default function statement (invoice: Invoice, plays: Play) {
         return amount;
     }
 
+    function volumeCreditsFor(performance: Performance) {
+        let volumeCredits = 0;
+        volumeCredits += Math.max(performance.audience - 30, 0);
+        if (PlayType.COMEDY === performance.play.type) volumeCredits += Math.floor(performance.audience / 5);
+        return volumeCredits;
+    }
 }
 
 function renderPlainText(statement: Invoice) {
@@ -66,7 +73,7 @@ function renderPlainText(statement: Invoice) {
     function volumeCredit() {
         let volumeCredits = 0;
         for (let perf of statement.performances) {
-            volumeCredits += volumeCreditsFor(perf)
+            volumeCredits += perf.volumeCredits;
         }
         return volumeCredits;
     }
@@ -74,13 +81,6 @@ function renderPlainText(statement: Invoice) {
     function usd(value: number): string {
         return new Intl.NumberFormat("en-US",
             { style: "currency", currency: "USD", minimumFractionDigits: 2 }).format(value/100)
-    }
-
-    function volumeCreditsFor(performance: Performance) {
-        let volumeCredits = 0;
-        volumeCredits += Math.max(performance.audience - 30, 0);
-        if (PlayType.COMEDY === performance.play.type) volumeCredits += Math.floor(performance.audience / 5);
-        return volumeCredits;
     }
 
 }
