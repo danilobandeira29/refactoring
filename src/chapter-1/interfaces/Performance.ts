@@ -7,4 +7,5 @@ export default interface Performance {
         name: string;
         type: PlayType;
     }
+    amount: number;
 }
