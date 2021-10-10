@@ -2,7 +2,7 @@ import Invoice from "./interfaces/Invoice";
 import Play from "./interfaces/Plays";
 import Statement from "./interfaces/Statement";
 import Performance from "./interfaces/Performance";
-import {PlayType} from "./interfaces/PlayType";
+import { PlayType } from "./interfaces/PlayType";
 
 export default function createStatement(invoice: Invoice, plays: Play) {
     const statement: Statement = {} as Statement;
