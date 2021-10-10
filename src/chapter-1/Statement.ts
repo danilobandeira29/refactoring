@@ -4,7 +4,6 @@ import { PlayType } from "./interfaces/PlayType";
 import Performance from "./interfaces/Performance";
 
 export default function statement (invoice: Invoice, plays: Play) {
-    let totalAmount = 0
     let result = `Statement for ${invoice.customer}\n`;
 
     for (let perf of invoice.performances) {
@@ -12,6 +11,7 @@ export default function statement (invoice: Invoice, plays: Play) {
         result += ` ${playsFor(perf).name}: ${usd(amountFor(perf))} (${perf.audience} seats)\n`;
     }
 
+    let totalAmount = 0
     for (let perf of invoice.performances) {
         totalAmount += amountFor(perf);
     }
