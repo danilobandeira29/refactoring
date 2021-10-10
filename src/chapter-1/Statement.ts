@@ -6,8 +6,12 @@ import Performance from "./interfaces/Performance";
 export default function statement (invoice: Invoice, plays: Play) {
     const statement: Invoice = {} as Invoice;
     statement.customer = invoice.customer;
-    statement.performances = invoice.performances;
+    statement.performances = invoice.performances.map(enrichPerformance);
     return renderPlainText(statement, plays);
+}
+
+function enrichPerformance(performance: Performance) {
+    return Object.assign({}, performance);
 }
 
 function renderPlainText(statement: Invoice, plays: Play) {
