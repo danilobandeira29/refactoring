@@ -10,6 +10,9 @@ export default function statement (invoice: Invoice, plays: Play) {
     for (let perf of invoice.performances) {
         // print line for this order
         result += ` ${playsFor(perf).name}: ${usd(amountFor(perf))} (${perf.audience} seats)\n`;
+    }
+
+    for (let perf of invoice.performances) {
         totalAmount += amountFor(perf);
     }
 
