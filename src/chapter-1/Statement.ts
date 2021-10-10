@@ -7,6 +7,8 @@ export default function statement (invoice: Invoice, plays: Play) {
     const statement: Invoice = {} as Invoice;
     statement.customer = invoice.customer;
     statement.performances = invoice.performances.map(enrichPerformance);
+    statement.totalAmount = totalAmount(statement);
+    statement.totalVolumeCredits = totalVolumeCredits(statement);
     return renderPlainText(statement);
 
     function enrichPerformance(aPerformance: Performance) {
@@ -49,6 +51,22 @@ export default function statement (invoice: Invoice, plays: Play) {
         if (PlayType.COMEDY === performance.play.type) volumeCredits += Math.floor(performance.audience / 5);
         return volumeCredits;
     }
+
+    function totalAmount(statement: Invoice) {
+        let totalAmount = 0;
+        for (let perf of statement.performances) {
+            totalAmount += perf.amount;
+        }
+        return totalAmount;
+    }
+
+    function totalVolumeCredits(statement: Invoice) {
+        let volumeCredits = 0;
+        for (let perf of statement.performances) {
+            volumeCredits += perf.volumeCredits;
+        }
+        return volumeCredits;
+    }
 }
 
 function renderPlainText(statement: Invoice) {
@@ -58,25 +76,9 @@ function renderPlainText(statement: Invoice) {
         result += ` ${perf.play.name}: ${usd(perf.amount)} (${perf.audience} seats)\n`;
     }
 
-    result += `Amount owed is ${usd(totalAmount())}\n`;
-    result += `You earned ${volumeCredit()} credits\n`;
+    result += `Amount owed is ${usd(statement.totalAmount)}\n`;
+    result += `You earned ${statement.totalVolumeCredits} credits\n`;
     return result;
-
-    function totalAmount() {
-        let totalAmount = 0;
-        for (let perf of statement.performances) {
-            totalAmount += perf.amount;
-        }
-        return totalAmount;
-    }
-
-    function volumeCredit() {
-        let volumeCredits = 0;
-        for (let perf of statement.performances) {
-            volumeCredits += perf.volumeCredits;
-        }
-        return volumeCredits;
-    }
 
     function usd(value: number): string {
         return new Intl.NumberFormat("en-US",
