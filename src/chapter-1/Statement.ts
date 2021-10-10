@@ -7,18 +7,25 @@ export default function statement (invoice: Invoice, plays: Play) {
     const statement: Invoice = {} as Invoice;
     statement.customer = invoice.customer;
     statement.performances = invoice.performances.map(enrichPerformance);
-    return renderPlainText(statement, plays);
+    return renderPlainText(statement);
+
+    function enrichPerformance(aPerformance: Performance) {
+        const performance: Performance = { ...aPerformance };
+        performance.play = playsFor(performance);
+        return performance;
+    }
+
+    function playsFor(p: Performance) {
+        return plays[p.playID];
+    }
+
 }
 
-function enrichPerformance(performance: Performance) {
-    return Object.assign({}, performance);
-}
-
-function renderPlainText(statement: Invoice, plays: Play) {
+function renderPlainText(statement: Invoice) {
     let result = `Statement for ${statement.customer}\n`;
 
     for (let perf of statement.performances) {
-        result += ` ${playsFor(perf).name}: ${usd(amountFor(perf))} (${perf.audience} seats)\n`;
+        result += ` ${perf.play.name}: ${usd(amountFor(perf))} (${perf.audience} seats)\n`;
     }
 
     result += `Amount owed is ${usd(totalAmount())}\n`;
@@ -46,20 +53,16 @@ function renderPlainText(statement: Invoice, plays: Play) {
             { style: "currency", currency: "USD", minimumFractionDigits: 2 }).format(value/100)
     }
 
-    function playsFor(p: Performance) {
-        return plays[p.playID];
-    }
-
     function volumeCreditsFor(performance: Performance) {
         let volumeCredits = 0;
         volumeCredits += Math.max(performance.audience - 30, 0);
-        if (PlayType.COMEDY === playsFor(performance).type) volumeCredits += Math.floor(performance.audience / 5);
+        if (PlayType.COMEDY === performance.play.type) volumeCredits += Math.floor(performance.audience / 5);
         return volumeCredits;
     }
 
     function amountFor(performance: Performance): number {
         let amount = 0;
-        switch (playsFor(performance).type) {
+        switch (performance.play.type) {
             case PlayType.TRAGEDY:
                 amount = 40000;
                 if (performance.audience > 30) {
@@ -74,7 +77,7 @@ function renderPlainText(statement: Invoice, plays: Play) {
                 amount += 300 * performance.audience;
                 break;
             default:
-                throw new Error(`unknown type: ${playsFor(performance).type}`);
+                throw new Error(`unknown type: ${performance.play.type}`);
         }
         return amount;
     }
