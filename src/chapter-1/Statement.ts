@@ -11,13 +11,11 @@ export default function statement (invoice: Invoice, plays: Play) {
         result += ` ${playsFor(perf).name}: ${usd(amountFor(perf))} (${perf.audience} seats)\n`;
     }
 
-    let totalAmount = totAmount()
-
-    result += `Amount owed is ${usd(totalAmount)}\n`;
+    result += `Amount owed is ${usd(totalAmount())}\n`;
     result += `You earned ${volumeCredit()} credits\n`;
     return result;
 
-    function totAmount() {
+    function totalAmount() {
         let totalAmount = 0;
         for (let perf of invoice.performances) {
             totalAmount += amountFor(perf);
