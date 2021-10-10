@@ -53,19 +53,11 @@ export default function statement (invoice: Invoice, plays: Play) {
     }
 
     function totalAmount(statement: Invoice) {
-        let totalAmount = 0;
-        for (let perf of statement.performances) {
-            totalAmount += perf.amount;
-        }
-        return totalAmount;
+        return statement.performances.reduce((acc, p) => acc + p.amount, 0);
     }
 
     function totalVolumeCredits(statement: Invoice) {
-        let volumeCredits = 0;
-        for (let perf of statement.performances) {
-            volumeCredits += perf.volumeCredits;
-        }
-        return volumeCredits;
+        return statement.performances.reduce((acc, p) => acc + p.volumeCredits, 0);
     }
 }
 
