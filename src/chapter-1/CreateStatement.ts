@@ -4,6 +4,16 @@ import Statement from "./interfaces/Statement";
 import Performance from "./interfaces/Performance";
 import { PlayType } from "./interfaces/PlayType";
 
+class PerformanceCalculator {
+    performance: Performance;
+    play: { name: string; type: PlayType };
+
+    constructor(performance: Performance, play: { name: string, type: PlayType }) {
+        this.performance = performance;
+        this.play = play;
+    }
+}
+
 export default function createStatement(invoice: Invoice, plays: Play) {
     const statement: Statement = {} as Statement;
     statement.customer = invoice.customer;
@@ -13,8 +23,9 @@ export default function createStatement(invoice: Invoice, plays: Play) {
     return statement;
 
     function enrichPerformance(aPerformance: Performance) {
+        const calculator = new PerformanceCalculator(aPerformance, playsFor(aPerformance));
         const performance: Performance = { ...aPerformance };
-        performance.play = playsFor(performance);
+        performance.play = calculator.play;
         performance.amount = amountFor(performance);
         performance.volumeCredits = volumeCreditsFor(performance);
         return performance;
