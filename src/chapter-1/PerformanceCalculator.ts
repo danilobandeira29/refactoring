@@ -10,14 +10,11 @@ export default class PerformanceCalculator {
         this.play = play;
     }
 
-    get amount(): number {
+    amount(): number {
         throw new Error("Subclass responsibility.");
     }
 
-    get volumeCreditsFor() {
-        let volumeCredits = 0;
-        volumeCredits += Math.max(this.performance.audience - 30, 0);
-        if (PlayType.COMEDY === this.play.type) volumeCredits += Math.floor(this.performance.audience / 5);
-        return volumeCredits;
+    volumeCreditsFor() {
+        return Math.max(this.performance.audience - 30, 0);
     }
 }

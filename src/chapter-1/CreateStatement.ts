@@ -18,8 +18,8 @@ export default function createStatement(invoice: Invoice, plays: Play) {
         const calculator = createPerformanceCalculator(aPerformance, playsFor(aPerformance));
         const performance: Performance = { ...aPerformance };
         performance.play = calculator.play;
-        performance.amount = calculator.amount;
-        performance.volumeCredits = calculator.volumeCreditsFor;
+        performance.amount = calculator.amount();
+        performance.volumeCredits = calculator.volumeCreditsFor();
         return performance;
     }
 
