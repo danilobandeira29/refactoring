@@ -11,25 +11,7 @@ export default class PerformanceCalculator {
     }
 
     get amount(): number {
-        let amount = 0;
-        switch (this.play.type) {
-            case PlayType.TRAGEDY:
-                amount = 40000;
-                if (this.performance.audience > 30) {
-                    amount += 1000 * (this.performance.audience - 30);
-                }
-                break;
-            case PlayType.COMEDY:
-                amount = 30000;
-                if (this.performance.audience > 20) {
-                    amount += 10000 + 500 * (this.performance.audience - 20);
-                }
-                amount += 300 * this.performance.audience;
-                break;
-            default:
-                throw new Error(`unknown type: ${this.performance.play.type}`);
-        }
-        return amount;
+        throw new Error("Subclass responsibility.");
     }
 
     get volumeCreditsFor() {
