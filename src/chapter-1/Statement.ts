@@ -11,7 +11,7 @@ function renderHtml(statement: Statement) {
     let result = `<h1>Statement for ${statement.customer}</h1>\n`;
     result += "<table>\n";
     result += "<tr><th>play</th><th>seats</th><th>cost</th></tr>\n";
-    for (let perf of statement.performances) {
+    for (const perf of statement.performances) {
         result += ` <tr><td>${perf.play.name}</td><td>${perf.audience}</td>\n`;
         result += ` <td>${usd(perf.amount)}</td>\n`;
     }
