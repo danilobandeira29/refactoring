@@ -1,39 +1,43 @@
-import Producer, {ProducerType} from "./Producer";
+import Producer from "./Producer";
 
-interface ProvinceType {
+type ProvinceType = {
     name: string;
     demand: number;
     price: number;
-    producers: ProducerType[]
+    producers: {
+        name: string;
+        cost: number;
+        production: number;
+    }[];
 }
 
 export default class Province {
-    private _name: string;
-    private _producers: ProducerType[];
-    public totalProduction: number;
-    private _demand: number;
-    private _price: number;
+    name: string;
+    producers: Producer[];
+    totalProduction: number;
+    demand: number;
+    price: number;
 
     constructor(doc: ProvinceType) {
-        this._name = doc.name;
-        this._producers = [];
+        this.name = doc.name;
+        this.producers = [];
         this.totalProduction = 0;
-        this._demand = doc.demand;
-        this._price = doc.price;
+        this.demand = doc.demand;
+        this.price = doc.price;
         doc.producers.forEach(d => this.addProducer(new Producer(this, d)));
     }
 
-    addProducer(arg: any) {
-        this._producers.push(arg);
+    addProducer(arg: Producer) {
+        this.producers.push(arg);
         this.totalProduction += arg.production;
     }
 
     getName() {
-        return this._name;
+        return this.name;
     }
 
     getProducers() {
-        return this._producers.slice();
+        return this.producers.slice();
     }
 
     getTotalProduction() {
@@ -45,23 +49,24 @@ export default class Province {
     }
 
     getDemand() {
-        return this._demand;
+        return this.demand;
     }
 
     setDemand(arg: string) {
-        this._demand = parseInt(arg);
+        this.demand = parseInt(arg);
     }
 
     getPrice()    {
-        return this._price;
+        return this.price;
     }
 
     setPrice(arg: string) {
-        this._price = parseInt(arg);
+        this.price = parseInt(arg);
     }
 
     getShortfall() {
-        return this._demand - this.totalProduction;
+        console.log(this.demand, this.totalProduction)
+        return this.demand - this.totalProduction;
     }
 
     getProfit() {
@@ -69,9 +74,9 @@ export default class Province {
     }
 
     getDemandCost() {
-        let remainingDemand = this._demand;
+        let remainingDemand = this.demand;
         let result = 0;
-        this._producers
+        this.producers
             .sort((a,b) => a.cost - b.cost)
             .forEach(p => {
                 const contribution = Math.min(remainingDemand, p.production);
@@ -82,11 +87,11 @@ export default class Province {
     }
 
     getDemandValue() {
-        return this.getSatisfiedDemand() * this._price;
+        return this.getSatisfiedDemand() * this.price;
     }
 
     getSatisfiedDemand() {
-        return Math.min(this._demand, this.totalProduction);
+        return Math.min(this.demand, this.totalProduction);
     }
 
 }

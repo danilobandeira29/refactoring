@@ -1,44 +1,44 @@
 import Province from "./Province";
 
-export interface ProducerType {
+type ProducerType = {
     cost: number;
     name: string;
     production: number;
 }
 
 export default class Producer {
-    private _province: Province;
-    private _cost: number;
-    private _name: string;
-    private _production: number;
+    province: Province;
+    cost: number;
+    name: string;
+    production: number;
 
     constructor(aProvince: Province, data: ProducerType) {
-        this._province = aProvince;
-        this._cost = data.cost;
-        this._name = data.name;
-        this._production = data.production || 0;
+        this.province = aProvince;
+        this.cost = data.cost;
+        this.name = data.name;
+        this.production = data.production || 0;
     }
 
     getName() {
-        return this._name;
+        return this.name;
     }
 
     getCost() {
-        return this._cost;
+        return this.cost;
     }
 
     setCost(arg: string) {
-        this._cost = parseInt(arg);
+        this.cost = parseInt(arg);
     }
 
     getProduction() {
-        return this._production;
+        return this.production;
     }
 
     setProduction(amountStr: string) {
         const amount = parseInt(amountStr);
         const newProduction = Number.isNaN(amount) ? 0 : amount;
-        this._province.totalProduction += newProduction - this._production;
-        this._production = newProduction;
+        this.province.totalProduction += newProduction - this.production;
+        this.production = newProduction;
     }
 }
