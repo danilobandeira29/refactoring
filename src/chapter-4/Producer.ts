@@ -31,14 +31,14 @@ export default class Producer {
         this._cost = parseInt(arg);
     }
 
-
     getProduction() {
         return this._production;
     }
+
     setProduction(amountStr: string) {
         const amount = parseInt(amountStr);
         const newProduction = Number.isNaN(amount) ? 0 : amount;
-        this._province._totalProduction += newProduction - this._production;
+        this._province.totalProduction += newProduction - this._production;
         this._production = newProduction;
     }
 }
