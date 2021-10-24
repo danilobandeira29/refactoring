@@ -1,10 +1,5 @@
 import Province from "./Province";
-
-type ProducerType = {
-    cost: number;
-    name: string;
-    production: number;
-}
+import { ProducerType } from "./types/Producer";
 
 export default class Producer {
     province: Province;
