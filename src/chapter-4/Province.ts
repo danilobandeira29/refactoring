@@ -1,15 +1,5 @@
 import Producer from "./Producer";
-
-type ProvinceType = {
-    name: string;
-    demand: number;
-    price: number;
-    producers: {
-        name: string;
-        cost: number;
-        production: number;
-    }[];
-}
+import { ProvinceType } from "./types/Province";
 
 export default class Province {
     name: string;
@@ -65,7 +55,6 @@ export default class Province {
     }
 
     getShortfall() {
-        console.log(this.demand, this.totalProduction)
         return this.demand - this.totalProduction;
     }
 
