@@ -1,9 +1,10 @@
 import Province from "./Province";
-import sampleProvinceData from "./sampleProvinceData";
+import ProvinceMock from "./ProvinceMock";
+import * as assert from "assert";
 
 describe('Province suite', function() {
     it('shortfall', function() {
-        const asia = new Province(sampleProvinceData());
-        expect(asia.getShortfall()).toBe(5);
+        const asia = new Province(ProvinceMock.create());
+        assert.equal(asia.getShortfall(), 5);
     })
 })
