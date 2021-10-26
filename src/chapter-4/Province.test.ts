@@ -23,6 +23,12 @@ describe("Province suite", function() {
             expect(asia.getShortfall()).toEqual(-6);
             expect(asia.getProfit()).toEqual(292);
         })
+
+        it("zero demand", function() {
+            asia.demand = 0;
+            expect(asia.getShortfall()).toEqual(-25);
+            expect(asia.getProfit()).toEqual(0);
+        })
     })
 
     describe("no producers", function() {
@@ -42,7 +48,7 @@ describe("Province suite", function() {
             expect(noProducers.getShortfall()).toEqual(30);
         })
 
-        it('profit', function() {
+        it("profit", function() {
             expect(noProducers.getProfit()).toEqual(0);
         })
     })
