@@ -29,6 +29,12 @@ describe("Province suite", function() {
             expect(asia.getShortfall()).toEqual(-25);
             expect(asia.getProfit()).toEqual(0);
         })
+
+        it("negative demand", function() {
+            asia.demand = -1;
+            expect(asia.getShortfall()).toEqual(-26);
+            expect(asia.getProfit()).toEqual(-10);
+        })
     })
 
     describe("no producers", function() {
