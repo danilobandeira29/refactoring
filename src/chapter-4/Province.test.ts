@@ -1,6 +1,5 @@
 import Province from "./Province";
 import ProvinceMock from "./ProvinceMock";
-import * as assert from "assert";
 
 describe("Province suite", function() {
     let asia: Province;
@@ -10,11 +9,11 @@ describe("Province suite", function() {
     })
 
     it("shortfall", function() {
-        assert.equal(asia.getShortfall(), 5);
+        expect(asia.getShortfall()).toEqual(5);
     })
 
     it("profit", function() {
-        assert.equal(asia.getProfit(), 230);
+        expect(asia.getProfit()).toEqual(230);
     })
 
     it("change production", function() {
