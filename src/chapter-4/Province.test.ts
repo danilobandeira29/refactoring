@@ -2,18 +2,18 @@ import Province from "./Province";
 import ProvinceMock from "./ProvinceMock";
 import * as assert from "assert";
 
-describe('Province suite', function() {
+describe("Province suite", function() {
     let asia: Province;
 
-    beforeEach(function () {
+    beforeEach(function() {
         asia = new Province(ProvinceMock.create());
     })
 
-    it('shortfall', function() {
+    it("shortfall", function() {
         assert.equal(asia.getShortfall(), 5);
     })
 
-    it('profit', function () {
+    it("profit", function() {
         assert.equal(asia.getProfit(), 230);
     })
 })
