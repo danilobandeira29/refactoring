@@ -25,15 +25,21 @@ describe("Province suite", function() {
         })
 
         it("zero demand", function() {
-            asia.demand = 0;
+            asia.setDemand("0");
             expect(asia.getShortfall()).toEqual(-25);
             expect(asia.getProfit()).toEqual(0);
         })
 
         it("negative demand", function() {
-            asia.demand = -1;
+            asia.setDemand("-1");
             expect(asia.getShortfall()).toEqual(-26);
             expect(asia.getProfit()).toEqual(-10);
+        })
+
+        it("empty string demand", function() {
+            asia.setDemand("");
+            expect(asia.getShortfall()).toEqual(NaN);
+            expect(asia.getProfit()).toEqual(NaN);
         })
     })
 
