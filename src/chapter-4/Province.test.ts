@@ -64,4 +64,17 @@ describe("Province suite", function() {
             expect(noProducers.getProfit()).toEqual(0);
         })
     })
+
+    describe("string for producers", function() {
+        it("empty string", function() {
+            const provinceWithStringProducers: ProvinceType = {
+                name: "string_producers",
+                producers: "" as unknown as Array<{name: string, cost: number, production: number}>,
+                demand: 0,
+                price: 20
+            };
+            const province = new Province(provinceWithStringProducers);
+            expect(province.getShortfall()).toEqual(0);
+        })
+    })
 })
