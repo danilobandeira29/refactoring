@@ -31,7 +31,7 @@ export default class Province {
     }
 
     getTotalProduction() {
-        return this.totalProduction;
+        return this.producers.reduce((acc, p) => acc + p.production, 0);
     }
 
     setTotalProduction(arg: number) {
@@ -55,7 +55,7 @@ export default class Province {
     }
 
     getShortfall() {
-        return this.demand - this.totalProduction;
+        return this.demand - this.getTotalProduction();
     }
 
     getProfit() {
@@ -80,7 +80,7 @@ export default class Province {
     }
 
     getSatisfiedDemand() {
-        return Math.min(this.demand, this.totalProduction);
+        return Math.min(this.demand, this.getTotalProduction());
     }
 
 }
