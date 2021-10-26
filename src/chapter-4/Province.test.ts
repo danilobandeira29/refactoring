@@ -16,4 +16,10 @@ describe("Province suite", function() {
     it("profit", function() {
         assert.equal(asia.getProfit(), 230);
     })
+
+    it("change production", function() {
+        asia.producers[0].production = 20;
+        expect(asia.getShortfall()).toEqual(-6);
+        expect(asia.getProfit()).toEqual(292);
+    })
 })
