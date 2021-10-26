@@ -34,12 +34,16 @@ describe("Province suite", function() {
                 producers: [],
                 demand: 30,
                 price: 20
-            }
-            noProducers = new Province(provinceWithoutProducers)
+            };
+            noProducers = new Province(provinceWithoutProducers);
         })
 
         it("shortfall", function() {
-            expect(noProducers.getShortfall()).toEqual(30)
+            expect(noProducers.getShortfall()).toEqual(30);
+        })
+
+        it('profit', function() {
+            expect(noProducers.getProfit()).toEqual(0);
         })
     })
 })
