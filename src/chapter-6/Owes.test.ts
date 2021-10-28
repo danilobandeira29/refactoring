@@ -18,7 +18,7 @@ describe("extract function", function() {
 
     it("should print details", function() {
         expect(console.log).toHaveBeenNthCalledWith(4, "name: Danilo Bandeira");
-        expect(console.log).toHaveBeenNthCalledWith(5, "amount: R$ 9,00");
-        expect(console.log).toHaveBeenNthCalledWith(6, "due: 28/11/1993");
+        expect(console.log).toHaveBeenNthCalledWith(5, "amount: R$9.00");
+        expect(console.log).toHaveBeenNthCalledWith(6, "due: 11/28/1993");
     })
 })
