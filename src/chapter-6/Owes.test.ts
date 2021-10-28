@@ -1,4 +1,4 @@
-import Owes from "./extract_function";
+import Owes from "./Owes";
 import invoiceMock from './mocks/mock';
 
 describe("extract function", function() {
