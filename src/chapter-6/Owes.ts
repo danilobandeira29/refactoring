@@ -2,16 +2,9 @@ import { Invoice } from "./interfaces";
 
 export default class Owes {
     printOwing(aInvoice: Invoice) {
-
         Owes.printBanner();
-
-        // calcula o valor a pagar (outstanding)
         const outstanding = Owes.calculateOutstanding(aInvoice);
-
-        // registra a data de vencimento (due date)
         const invoice = Owes.recordDueDate(aInvoice);
-
-        // exibe detalhes
         Owes.printDetails(invoice, outstanding);
     }
 
