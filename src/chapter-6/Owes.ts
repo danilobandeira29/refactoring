@@ -14,10 +14,12 @@ export default class Owes {
         console.log("***********************");
     }
 
-    private static printDetails(invoice: Invoice, outstanding: number) {
-        console.log(`name: ${invoice.customer}`);
-        console.log(`amount: ${Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(outstanding)}`);
-        console.log(`due: ${invoice.dueDate.toLocaleDateString("pt-BR")}`);
+    private static calculateOutstanding(i: Invoice) {
+        let outstanding = 0;
+        for (const o of i.orders) {
+            outstanding += o.amount;
+        }
+        return outstanding;
     }
 
     private static recordDueDate(i: Invoice) {
@@ -27,11 +29,14 @@ export default class Owes {
         return invoice;
     }
 
-    private static calculateOutstanding(i: Invoice) {
-        let outstanding = 0;
-        for (const o of i.orders) {
-            outstanding += o.amount;
-        }
-        return outstanding;
+    private static printDetails(invoice: Invoice, outstanding: number) {
+        console.log(`name: ${invoice.customer}`);
+        console.log(`amount: ${Owes.toBRL(outstanding)}`);
+        console.log(`due: ${invoice.dueDate.toLocaleDateString("pt-BR")}`);
     }
+
+    private static toBRL(value: number) {
+        return Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(value);
+    }
+
 }
