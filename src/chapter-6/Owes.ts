@@ -4,9 +4,7 @@ export default class Owes {
     printOwing(invoice: Invoice) {
         let outstanding = 0;
 
-        console.log("***********************");
-        console.log("**** Customer Owes ****");
-        console.log("***********************");
+        Owes.printBanner();
 
         // calcula o valor a pagar (outstanding)
         for (const o of invoice.orders) {
@@ -21,5 +19,11 @@ export default class Owes {
         console.log(`name: ${invoice.customer}`);
         console.log(`amount: ${Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(outstanding)}`);
         console.log(`due: ${invoice.dueDate.toLocaleDateString("pt-BR")}`);
+    }
+
+    private static printBanner() {
+        console.log("***********************");
+        console.log("**** Customer Owes ****");
+        console.log("***********************");
     }
 }
