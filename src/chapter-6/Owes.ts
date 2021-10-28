@@ -16,14 +16,18 @@ export default class Owes {
         invoice.dueDate = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 30);
 
         // exibe detalhes
-        console.log(`name: ${invoice.customer}`);
-        console.log(`amount: ${Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(outstanding)}`);
-        console.log(`due: ${invoice.dueDate.toLocaleDateString("pt-BR")}`);
+        Owes.printDetails(invoice, outstanding);
     }
 
     private static printBanner() {
         console.log("***********************");
         console.log("**** Customer Owes ****");
         console.log("***********************");
+    }
+
+    private static printDetails(invoice: Invoice, outstanding: number) {
+        console.log(`name: ${invoice.customer}`);
+        console.log(`amount: ${Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(outstanding)}`);
+        console.log(`due: ${invoice.dueDate.toLocaleDateString("pt-BR")}`);
     }
 }
