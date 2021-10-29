@@ -19,4 +19,4 @@ aplicar _Extract Function_ com mais cuidado, evitando tantas delegações indire
 
 [Back to Top](#basic-refactorings)
 
-Inspirador por: https://gist.github.com/cs-cordero/3799f26699bdecdb286fd719f08122af
+Inspirado por: https://gist.github.com/cs-cordero/3799f26699bdecdb286fd719f08122af
