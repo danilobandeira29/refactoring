@@ -4,6 +4,8 @@
 * [Extract Function (134)](#extract-function-134)
 * [Inline Function (144)](#inline-function-144)
 * [Extract Variable (147)](#extract-variable-147)
+* [Inline Variable (147)](#inline-variable-152)
+* [Change Function Declaration (153)](#change-function-declaration-153)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -24,6 +26,20 @@ que sejam mais fácil de ler. Dessa forma, é possível dar nomes descritivos pa
 Caso o sentido seja apenas no contexto de uma função, então utilizar _Extract Variable_ é uma boa solução.
 Porém, em casos onde o contexto é mais amplo(além da função que a expressão se encontra), é mais interessante disponibilizar em forma de função
 _Extract Function_.
+
+[Back to Top](#basic-refactorings)
+
+### Inline Variable (152)
+Utilizar quando o nome da variável não diz nada além do que a própria expressão.
+
+### Change Function Declaration (153)
+Também conhecido como _Rename Function_, _Rename Method_, _Add Parameter_, _Remove Parameter_, _Change Signature_.
+Bons nomes são essenciais para entendimento do sistema de forma fácil. Se possuo um nome descritivo, não tenho a necessidade
+de olhar o corpo da função. Porém, o nome de uma Função ou Método, na grande maioria das vezes, não é o melhor na primeira declaração.
+
+Muito útil para diminuir o acoplamento entre módulos, onde uma função ou método muitas vezes não é necessário ter conhecimento
+da interface de um objeto. Por exemplo, se tiver uma função para formatar o número de telefone de uma pessoa, onde tal função
+aceita uma pessoa como parâmetro, não poderei usá-la para formatar o número de telefone de uma empresa.
 
 [Back to Top](#basic-refactorings)
 
