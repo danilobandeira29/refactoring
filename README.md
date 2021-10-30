@@ -4,7 +4,7 @@
 * [Extract Function (134)](#extract-function-134)
 * [Inline Function (144)](#inline-function-144)
 * [Extract Variable (147)](#extract-variable-147)
-* [Inline Variable (147)](#inline-variable-152)
+* [Inline Variable (152)](#inline-variable-152)
 * [Change Function Declaration (153)](#change-function-declaration-153)
 
 ### Extract Function (134)
