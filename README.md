@@ -34,6 +34,7 @@ Utilizar quando o nome da variável não diz nada além do que a própria expres
 
 ### Change Function Declaration (153)
 Também conhecido como _Rename Function_, _Rename Method_, _Add Parameter_, _Remove Parameter_, _Change Signature_.
+
 Bons nomes são essenciais para entendimento do sistema de forma fácil. Se possuo um nome descritivo, não tenho a necessidade
 de olhar o corpo da função. Porém, o nome de uma Função ou Método, na grande maioria das vezes, não é o melhor na primeira declaração.
 
