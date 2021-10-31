@@ -6,6 +6,7 @@
 * [Extract Variable (147)](#extract-variable-147)
 * [Inline Variable (152)](#inline-variable-152)
 * [Change Function Declaration (153)](#change-function-declaration-153)
+* [Encapsulate Variable (160)](#encapsulate-variable-160)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -41,6 +42,15 @@ de olhar o corpo da função. Porém, o nome de uma Função ou Método, na gran
 Muito útil para diminuir o acoplamento entre módulos, onde uma função ou método muitas vezes não é necessário ter conhecimento
 da interface de um objeto. Por exemplo, se tiver uma função para formatar o número de telefone de uma pessoa, onde tal função
 aceita uma pessoa como parâmetro, não poderei usá-la para formatar o número de telefone de uma empresa.
+
+[Back to Top](#basic-refactorings)
+
+### Encapsulate Variable (160)
+Dados, diferentemente de funções, são difíceis de alterar ou refatorar caso o seu escopo seja amplo. No caso de uma função antiga,
+ é possível migra-la mantendo-a intacta como uma função de encaminhamento. (o cliente continua a chamar a função antiga, que chama a função nova).
+No caso de dados(variáveis), o ideal é ter funções que servem como encapsulamento, tanto de acesso como de atualização para manipulação.
+ O encapsulamento garante um controle sobre os dados, como eles podem ou não serem alterados. Ademais, transforma a difícil tarefa 
+de reorganizar dados na tarefa mais simples de reorganizar funções, utilizando _Change Function Declaration_.
 
 [Back to Top](#basic-refactorings)
 
