@@ -46,11 +46,15 @@ aceita uma pessoa como parâmetro, não poderei usá-la para formatar o número 
 [Back to Top](#basic-refactorings)
 
 ### Encapsulate Variable (160)
-Dados, diferentemente de funções, são difíceis de alterar ou refatorar caso o seu escopo seja amplo. No caso de uma função antiga,
- é possível migra-la mantendo-a intacta como uma função de encaminhamento. (o cliente continua a chamar a função antiga, que chama a função nova).
+Dados, diferentemente de funções, são difíceis de alterar ou refatorar caso o seu escopo seja amplo.
+
+No caso de uma função antiga,
+é possível migra-la mantendo-a intacta como uma função de encaminhamento (o cliente continua a chamar a função antiga, que chama a função nova).
+
 No caso de dados(variáveis), o ideal é ter funções que servem como encapsulamento, tanto de acesso como de atualização para manipulação.
+
  O encapsulamento garante um controle sobre os dados, como eles podem ou não serem alterados. Ademais, transforma a difícil tarefa 
-de reorganizar dados na tarefa mais simples de reorganizar funções, utilizando _Change Function Declaration_.
+de reorganizar dados na tarefa mais simples de reorganizar funções, utilizando _Change Function Declaration_, por exemplo.
 
 [Back to Top](#basic-refactorings)
 
