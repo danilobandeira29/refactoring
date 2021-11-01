@@ -60,7 +60,7 @@ de reorganizar dados na tarefa mais simples de reorganizar funções, utilizando
 [Back to Top](#basic-refactorings)
 
 ### Rename Variable (165)
-Bons nomes são essenciais para o entendimento sem gerar muito esforço. Utilizar para que o código se autodescreva.
+Bons nomes são essenciais para o entendimento do software sem gerar muito esforço. Utilizar para que o código se autodescreva.
 Não irei conseguir criar bons nomes de primeira tentativa. Ademais, a variável acaba a receber outro nome como consequência
 das mudanças nas necessidades dos meus usuários.
 
