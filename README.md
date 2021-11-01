@@ -7,6 +7,7 @@
 * [Inline Variable (152)](#inline-variable-152)
 * [Change Function Declaration (153)](#change-function-declaration-153)
 * [Encapsulate Variable (160)](#encapsulate-variable-160)
+* [Rename Variable (165)](#rename-variable-165)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -55,6 +56,16 @@ No caso de dados(variáveis), o ideal é ter funções que servem como encapsula
 
  O encapsulamento garante um controle sobre os dados, como eles podem ou não serem alterados. Ademais, transforma a difícil tarefa 
 de reorganizar dados na tarefa mais simples de reorganizar funções, utilizando _Change Function Declaration_, por exemplo.
+
+[Back to Top](#basic-refactorings)
+
+### Rename Variable (165)
+Bons nomes são essenciais para o entendimento sem gerar muito esforço. Utilizar para que o código se autodescreva.
+Não irei conseguir criar bons nomes de primeira tentativa. Ademais, a variável acaba a receber outro nome como consequência
+das mudanças nas necessidades dos meus usuários.
+
+O nome de uma variável deve refletir o tamanho do seu escopo. Se ela está inserida numa função de 2 linhas, então posso ter
+uma letra como nome. Caso o seu escopo seja mais amplo, devo utilizar um nome mais descritivo.
 
 [Back to Top](#basic-refactorings)
 
