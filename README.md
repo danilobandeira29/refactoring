@@ -8,6 +8,7 @@
 * [Change Function Declaration (153)](#change-function-declaration-153)
 * [Encapsulate Variable (160)](#encapsulate-variable-160)
 * [Rename Variable (165)](#rename-variable-165)
+* [Introduce Parameter Object (168)](#introduce-parameter-object-168)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -66,6 +67,17 @@ das mudanças nas necessidades dos meus usuários.
 
 O nome de uma variável deve refletir o tamanho do seu escopo. Se ela está inserida numa função de 2 linhas, então posso ter
 uma letra como nome. Caso o seu escopo seja mais amplo, devo utilizar um nome mais descritivo.
+
+[Back to Top](#basic-refactorings)
+
+### Introduce Parameter Object (168)
+Existem dados que aparecerem em grupo, onde ao chamar um é necessário chamar outro, por exemplo,
+_startDate_ e _endDate_. Ao aplicar _Introduce Parameter Object_, eles farão parte do mesmo objeto ou classe, 
+tornando esse relacionamento explicito,
+e assim diminuindo a quantidade de parâmetros das funções que os chamam.
+
+O real benefício é que isso me permite criar comportamentos comuns nesses dados, 
+por exemplo, _isBetween_, criando uma abstração que simplifica a compreensão do meu domínio.
 
 [Back to Top](#basic-refactorings)
 
