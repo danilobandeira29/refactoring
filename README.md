@@ -9,6 +9,7 @@
 * [Encapsulate Variable (160)](#encapsulate-variable-160)
 * [Rename Variable (165)](#rename-variable-165)
 * [Introduce Parameter Object (168)](#introduce-parameter-object-168)
+* [Combine Functions into Class (168)](#combine-functions-into-class-172)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -78,6 +79,14 @@ e assim diminuindo a quantidade de parâmetros das funções que os chamam.
 
 O real benefício é que isso me permite criar comportamentos comuns nesses dados, 
 por exemplo, _isBetween_, criando uma abstração que simplifica a compreensão do meu domínio.
+
+[Back to Top](#basic-refactorings)
+
+### Combine Functions into Class (172)
+Utilizar quando funções compartilham o mesmo corpo comum de dados (em geral, passados como argumentos da chamada de função).
+
+Usar uma classe deixa o ambiente comum compartilhado por essas funções mais explicito, permite simplificar as chamadas de 
+função dentro do objeto por meio da remoção de vários argumentos, já que usarão variáveis da classe.
 
 [Back to Top](#basic-refactorings)
 
