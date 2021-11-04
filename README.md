@@ -86,7 +86,7 @@ por exemplo, _isBetween_, criando uma abstração que simplifica a compreensão 
 Utilizar quando funções compartilham o mesmo corpo comum de dados (em geral, passados como argumentos da chamada de função).
 
 Usar uma classe deixa o ambiente comum compartilhado por essas funções mais explicito, permite simplificar as chamadas de 
-função dentro do objeto por meio da remoção de vários argumentos, já que usarão variáveis da classe.
+função dentro do objeto por meio da remoção de vários argumentos, já que usarão variáveis de instância.
 
 [Back to Top](#basic-refactorings)
 
