@@ -10,6 +10,7 @@
 * [Rename Variable (165)](#rename-variable-165)
 * [Introduce Parameter Object (168)](#introduce-parameter-object-168)
 * [Combine Functions into Class (172)](#combine-functions-into-class-172)
+* [Combine Functions into Transform (172)](#combine-functions-into-transform-177)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -89,5 +90,16 @@ Usar uma classe deixa o ambiente comum compartilhado por essas funções mais ex
 função dentro do objeto por meio da remoção de vários argumentos, já que usarão variáveis de instância.
 
 [Back to Top](#basic-refactorings)
+
+### Combine Functions into Transform (177)
+Utilizar quando funções compartilham o mesmo corpo comum de dados (em geral, passados como argumentos da chamada de função).
+
+A partir disso, criar uma função pura, que irá pegar o corpo comum, fazer uma _deep copy_, alterar as propriedades dessa cópia
+(transformar ou enriquecer com dados calculados) e devolver para o _client_ com os valores atualizados, sem alterar o corpo original.
+
+Dessa forma todos os lugares que transformam um objeto de entrada para gerar novos valores estão num único lugar.
+
+[Back to Top](#basic-refactorings)
+
 
 Inspirado por: https://gist.github.com/cs-cordero/3799f26699bdecdb286fd719f08122af
