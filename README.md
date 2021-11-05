@@ -11,6 +11,7 @@
 * [Introduce Parameter Object (168)](#introduce-parameter-object-168)
 * [Combine Functions into Class (172)](#combine-functions-into-class-172)
 * [Combine Functions into Transform (177)](#combine-functions-into-transform-177)
+* [Split Phase (183)](#split-phase-183)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -98,6 +99,16 @@ A partir disso, criar uma função pura, que irá pegar o corpo comum, fazer uma
 (transformar ou enriquecer com dados calculados) e devolver para o _client_ com os valores atualizados, sem alterar o corpo original.
 
 Dessa forma todos os lugares que transformam um objeto de entrada para gerar novos valores estão num único lugar.
+
+[Back to Top](#basic-refactorings)
+
+### Split Phase (183)
+Utilizar quando uma função faz mais de uma coisa.
+
+Por exemplo, uma função que faz parse e calcula os valores de um pedido.
+Dividir em duas fases, onde a primeira fase irá fazer o parse da estrutura, 
+e a segunda fase irá fazer os cálculos. A segunda fase irá receber os 
+parâmetros necessários, seguido de uma estrutura de dados intermediária que fará a troca de dados entre a primeira e a segunda fase.
 
 [Back to Top](#basic-refactorings)
 
