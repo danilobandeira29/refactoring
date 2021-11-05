@@ -10,7 +10,7 @@
 * [Rename Variable (165)](#rename-variable-165)
 * [Introduce Parameter Object (168)](#introduce-parameter-object-168)
 * [Combine Functions into Class (172)](#combine-functions-into-class-172)
-* [Combine Functions into Transform (172)](#combine-functions-into-transform-177)
+* [Combine Functions into Transform (177)](#combine-functions-into-transform-177)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
