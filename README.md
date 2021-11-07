@@ -15,6 +15,7 @@
 
 ## Encapsulation
 * [Encapsulate Record (190)](#encapsulate-record-190)
+* [Encapsulate Collection (198)](#encapsulate-collection-198)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -127,6 +128,18 @@ const range = { end:5, length: 5 };
 Fowler prefere objetos a estrutura de dados quando trabalha com dados mutáveis, pois assim é possível expor
 apenas os comportamentos, um para cada valor acima, por exemplo. Além disso, o _client_ de um objeto não saberá a estrutura interna 
 nem como a lógica de cálculo está implementada, possibilitando assim fazer alterações mais facilmente.
+
+[Back to Top](#basic-refactorings)
+
+### Encapsulate Collection (198)
+Caso especial do _Encapsulate Record_.
+
+Segundo Fowler, é mais fácil manter dados mutáveis encapsulados, pois, o rastreio das alterações na estrutura se torna explícito.
+
+Muitas vezes, os _getters_ de uma _coleção_ subjacente devolve diretamente o seu estado, sendo possível modificar 
+e manipular sem que a Classe que encapsula a coleção possa intervir, quebrando o encapsulamento e dificultando a depuração caso ocorra bugs (ou se os desenvolvedores não tiverem conhecimento sobre a estrutura).
+
+O ideal, é devolver uma cópia da coleção e oferecer ao _client_ métodos para manipulação da _coleção_ a partir do _Encapsulated Record_(_add_, _remove_ e _access_).
 
 [Back to Top](#basic-refactorings)
 
