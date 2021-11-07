@@ -139,7 +139,7 @@ Segundo Fowler, é mais fácil manter dados mutáveis encapsulados, pois, o rast
 Muitas vezes, os _getters_ de uma _coleção_ subjacente de uma Classe(_Encapsulated Record_) devolve diretamente o seu estado, sendo possível modificar 
 e manipular sem que o _Encapsulated Record_ possa intervir, quebrando o encapsulamento e dificultando a depuração caso ocorra bugs (ou se os desenvolvedores não tiverem conhecimento sobre a estrutura).
 
-O ideal, é devolver uma cópia da coleção e oferecer ao _client_ métodos para manipulação da _coleção_ a partir do _Encapsulated Record_(_add_, _remove_ e _access_).
+O ideal, é devolver uma cópia da coleção e oferecer ao _client_ métodos para manipulação da _coleção_ a partir do _Encapsulated Record_(métodos _add_, _remove_ e _access_).
 
 [Back to Top](#basic-refactorings)
 
