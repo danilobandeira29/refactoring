@@ -125,7 +125,7 @@ const range = { start: 1, length: 5 };
 const range = { end:5, length: 5 };
 ```
 Fowler prefere objetos a estrutura de dados quando trabalha com dados mutáveis, pois assim é possível expor
-apenas os comportamentos, um para cada valor acima, por exemplo. Além disso, o _client_ desse objeto não saberá a estrutura interna 
+apenas os comportamentos, um para cada valor acima, por exemplo. Além disso, o _client_ de um objeto não saberá a estrutura interna 
 nem como a lógica de cálculo está implementada, possibilitando assim fazer alterações mais facilmente.
 
 [Back to Top](#basic-refactorings)
