@@ -13,6 +13,9 @@
 * [Combine Functions into Transform (177)](#combine-functions-into-transform-177)
 * [Split Phase (183)](#split-phase-183)
 
+## Encapsulation
+* [Encapsulate Record (190)](#encapsulate-record-190)
+
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
 Se voce investe tempo para tentar entender o que um bloco de código faz, transforme-o numa função com um nome que descreva o seu comportamento.
@@ -112,5 +115,19 @@ parâmetros necessários, seguido de uma estrutura de dados intermediária que f
 
 [Back to Top](#basic-refactorings)
 
+### Encapsulate Record (190)
+Estrutura de dados exemplo:
+```js
+const range = { start: 1, end: 5 };
+//ou
+const range = { start: 1, length: 5 };
+//ou
+const range = { end:5, length: 5 };
+```
+Fowler prefere objetos a estrutura de dados quando trabalha com dados mutáveis, pois assim é possível expor
+apenas os comportamentos, um para cada valor acima, por exemplo. Além disso, o _client_ desse objeto não saberá a estrutura interna 
+nem como a lógica de cálculo está implementada, possibilitando assim fazer alterações mais facilmente.
+
+[Back to Top](#basic-refactorings)
 
 Inspirado por: https://gist.github.com/cs-cordero/3799f26699bdecdb286fd719f08122af
