@@ -6,8 +6,8 @@ describe("High Order Count Suite", function() {
             new Order("high"),
             new Order("rush"),
             new Order("normal"),
-            new Order("normal"),
-        ].filter(o => o.getPriority().highThan('normal')).length;
+            new Order("low"),
+        ].filter(o => o.getPriority().highThan("normal")).length;
         expect(highOrdersCount).toEqual(2);
     })
 })
