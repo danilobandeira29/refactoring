@@ -16,6 +16,7 @@
 ## Encapsulation
 * [Encapsulate Record (190)](#encapsulate-record-190)
 * [Encapsulate Collection (198)](#encapsulate-collection-198)
+* [Replace Primitive with Object (203)](#replace-primitive-with-object-203)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -142,5 +143,16 @@ e manipular sem que o _Encapsulated Record_ possa intervir, quebrando o encapsul
 O ideal, é devolver uma cópia da coleção e oferecer ao _client_ métodos para manipulação da _coleção_ a partir do _Encapsulated Record_(métodos _add_, _remove_ e _access_).
 
 [Back to Top](#basic-refactorings)
+
+### Replace Primitive with Object (203)
+Nas etapas iniciais do desenvolvimento de software, tomamos a decisão de representar valores como tipo primitivo, 
+exemplo: string para representar CPF. À medida que o software evoluí, esses valores não serão mais simples. 
+Um CPF pode ser representado sem ou com formatação, ter necessidade de validar e afins. E isso pode acabar com duplicação na lógica.
+(O mesmo vale para telefone, date range entre outros).
+
+O ideal é encapsular esses valores para que, futuramente, possam ser adicionados comportamentos.
+
+[Back to Top](#basic-refactorings)
+
 
 Inspirado por: https://gist.github.com/cs-cordero/3799f26699bdecdb286fd719f08122af
