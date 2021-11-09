@@ -20,4 +20,12 @@ export default class Priority {
     highThan(value: string) {
         return Priority.getIndex(this.toString()) > Priority.getIndex(value);
     }
+
+    equals(value: string) {
+       return Priority.getIndex(this.toString()) === Priority.getIndex(value);
+    }
+
+    lowerThan(value: string) {
+        return Priority.getIndex(this.toString()) < Priority.getIndex(value);
+    }
 }
