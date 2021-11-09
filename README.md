@@ -17,6 +17,7 @@
 * [Encapsulate Record (190)](#encapsulate-record-190)
 * [Encapsulate Collection (198)](#encapsulate-collection-198)
 * [Replace Primitive with Object (203)](#replace-primitive-with-object-203)
+* [Replace Temp with Query (207)](#replace-temp-with-query-207)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -151,6 +152,21 @@ Um CPF pode ser representado sem ou com formatação, ter necessidade de validar
 (O mesmo vale para telefone, date range entre outros).
 
 O ideal é encapsular esses valores para que, futuramente, possam ser adicionados comportamentos.
+
+[Back to Top](#basic-refactorings)
+
+### Replace Temp with Query (207)
+Variáveis temporárias são usadas para capturar o valor de um código de modo a referenciá-lo mais tarde numa função, além 
+de explicar o significado da expressão.
+
+Utilizar uma função ao invés de variável temporária, dando mais sentido num contexto mais amplo, além de permitir quebrar 
+uma função longa em pequenas.
+
+Caso a variável seja atribuída várias vezes, todas as atribuições devem ser extraídas e colocadas na consulta.
+
+Essa refatoração funciona melhor em classe, pois existe um contexto compartilhado para os métodos extraídos. Fora de 
+uma classe, pode correr o risco de ter muitos parâmetros numa função de nível mais alto, perdendo boa parte das vantagens 
+de usar uma função.
 
 [Back to Top](#basic-refactorings)
 
