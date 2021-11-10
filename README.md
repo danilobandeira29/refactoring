@@ -18,6 +18,7 @@
 * [Encapsulate Collection (198)](#encapsulate-collection-198)
 * [Replace Primitive with Object (203)](#replace-primitive-with-object-203)
 * [Replace Temp with Query (207)](#replace-temp-with-query-207)
+* [Extract Class (211)](#extract-class-211)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -170,5 +171,13 @@ de usar uma função.
 
 [Back to Top](#basic-refactorings)
 
+### Extract Class (211)
+Classes devem ter uma abstração nítida, deve lidar apenas com algumas responsabilidades claras.
+Classes cresce e acabam ficando cheias de responsabilidades, pois você julga não ser necessária outra classe.
+
+Um bom sinal de que uma Classe deve ser dividida em outra(s) é quando um subconjunto dos dados e um subconjunto dos métodos
+parecem formar um conjunto. Outro sinal é quando um subconjunto de dados mudam juntos.
+
+[Back to Top](#basic-refactorings)
 
 Inspirado por: https://gist.github.com/cs-cordero/3799f26699bdecdb286fd719f08122af
