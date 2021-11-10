@@ -172,8 +172,8 @@ de usar uma função.
 [Back to Top](#basic-refactorings)
 
 ### Extract Class (211)
-Classes devem ser uma abstração nítida, deve lidar apenas com algumas responsabilidades claras.
-Classes cresce e acabam ficando cheias de responsabilidades, pois você julga não ser necessária outra classe.
+Uma Classe deve ser uma abstração nítida, deve lidar apenas com algumas responsabilidades claras.
+Uma Classe cresce e acaba ficando cheias de responsabilidades, pois você julga não ser necessária outra classe.
 
 Um bom sinal de que uma Classe deve ser dividida em outra(s) é quando um subconjunto dos dados e um subconjunto dos métodos
 parecem formar um conjunto. Outro sinal é quando um subconjunto de dados mudam juntos.
