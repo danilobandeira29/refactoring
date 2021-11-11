@@ -191,8 +191,7 @@ a nova separação.
 
 Uma abordagem genérica de reorganizar o código: às vezes, é mais fácil mover elementos, um de cada vez, de um contexto para outro;
 outras vezes, porém, é melhor usar _Inline Class_ para reunir os contextos e depois usar _Extract Class_ para separar em 
-elementos
-diferentes.
+elementos diferentes.
 
 [Back to Top](#basic-refactorings)
 
