@@ -6,6 +6,6 @@ describe("Shipment", function() {
             company_name: "DB",
             tracking_number: 4444
         };
-        expect(new Shipment(tracking_dto).display()).toEqual("DB: 4444");
+        expect(new Shipment(tracking_dto).tracking()).toEqual("DB: 4444");
     })
 })
