@@ -189,7 +189,7 @@ Outro motivo para utilizar _Inline Class_ é quando tenho que refatorar duas cla
 diferente de recursos. O mais fácil é utilizar _Inline Class_ para juntar ambas, e então usar _Extract Class_ para fazer 
 a nova separação.
 
-Uma abordagem genérica de reorganizar o código: às vezes, é mais fácil mover elementos, um de cada vez, de um contexto para outro;
+Está é a abordagem genérica para reorganizar o código: às vezes, é mais fácil mover elementos, um de cada vez, de um contexto para outro;
 outras vezes, porém, é melhor usar _Inline Class_ para reunir os contextos e depois usar _Extract Class_ para separar em 
 elementos diferentes.
 
