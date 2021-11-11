@@ -19,6 +19,7 @@
 * [Replace Primitive with Object (203)](#replace-primitive-with-object-203)
 * [Replace Temp with Query (207)](#replace-temp-with-query-207)
 * [Extract Class (211)](#extract-class-211)
+* [Inline Class (215)](#inline-class-215)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -177,6 +178,20 @@ Uma Classe cresce e acaba ficando cheias de responsabilidades, pois você julga 
 
 Um bom sinal de que uma Classe deve ser dividida em outra(s) é quando um subconjunto dos dados e um subconjunto dos métodos
 parecem formar um conjunto. Outro sinal é quando um subconjunto de dados mudam juntos.
+
+[Back to Top](#basic-refactorings)
+
+### Inline Class (215)
+Às vezes, uma Classe extraída não vale mais a pena, ela não deveria existir. Isso é resultado de mover responsabilidade 
+de uma Classe original, tornando-a vazia.
+
+Outro motivo para utilizar _Inline Class_ é quando tenho que refatorar duas classes em outro par de Classes com uma alocação
+diferente de recursos. O mais fácil é utilizar _Inline Class_ para juntar ambas, e então usar _Extract Class_ para fazer 
+a nova separação.
+
+Uma abordagem genérica de reorganizar o código: às vezes, é mais fácil mover elementos, um de cada vez, de um contexto para outro;
+outras vezes, porém, é melhor usar _Inline Class_ para reunir contextos e depois usar _Extract Class_ para separar elementos
+diferentes.
 
 [Back to Top](#basic-refactorings)
 
