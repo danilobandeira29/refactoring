@@ -20,6 +20,7 @@
 * [Replace Temp with Query (207)](#replace-temp-with-query-207)
 * [Extract Class (211)](#extract-class-211)
 * [Inline Class (215)](#inline-class-215)
+* [Hide Delegate (218)](#hide-delegate-218)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -192,6 +193,21 @@ a nova separação.
 Esta é a abordagem genérica para reorganizar o código: às vezes, é mais fácil mover elementos, um de cada vez, de um contexto para outro;
 outras vezes, porém, é melhor usar _Inline Class_ para reunir os contextos e depois usar _Extract Class_ para separar em 
 elementos diferentes.
+
+[Back to Top](#basic-refactorings)
+
+### Hide Delegate (218)
+O segredo para um bom design modular é o encapsulamento. Um encapsulamento significa que módulos precisam saber menos 
+sobre outras partes do sistema. Logo, quando houver mudanças num módulo, menos módulos precisarão ter conhecimento sobre elas.
+
+Exemplo: 
+
+Se temos 4 clientes A, B, C e D, onde todos consomem o método _getManager_ da Classe _Department_ que está na Classe
+_Person_. Se a interface de _Department_ mudar, todos os clientes saberão e deverão mudar junto a ele. _Person_ pode 
+esconder a delegação simplesmente chamando o método que se faz necessário em todos os clientes de _Department_. Em outras
+palavras, alguns métodos de _Person_ irão encapsular as chamadas para os métodos de _Department_.
+
+Dessa forma, caso _Department_ mude a sua interface, o impacto será apenas em _Person_.
 
 [Back to Top](#basic-refactorings)
 
