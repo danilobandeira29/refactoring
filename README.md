@@ -21,6 +21,7 @@
 * [Extract Class (211)](#extract-class-211)
 * [Inline Class (215)](#inline-class-215)
 * [Hide Delegate (218)](#hide-delegate-218)
+* [Remove Middle Man (220)](#remove-middle-man-220)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -208,6 +209,12 @@ esconder a delegação simplesmente chamando o método que se faz necessário em
 palavras, alguns métodos de _Person_ irão encapsular as chamadas para os métodos de _Department_.
 
 Dessa forma, caso _Department_ mude a sua interface, o impacto será apenas em _Person_.
+
+[Back to Top](#basic-refactorings)
+
+### Remove Middle Man (220)
+Certamente existem vantagens em utilizar o _Hide Delegate_, porém, a sua desvantagem é que, sempre que um cliente precisar
+de um método do objeto delegado, o _middle man_ precisará implementar um método simples.
 
 [Back to Top](#basic-refactorings)
 
