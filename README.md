@@ -22,7 +22,7 @@
 * [Inline Class (215)](#inline-class-215)
 * [Hide Delegate (218)](#hide-delegate-218)
 * [Remove Middle Man (220)](#remove-middle-man-220)
-* [Substitute Algorithm (220)](#substitute-algorithm-223)
+* [Substitute Algorithm (223)](#substitute-algorithm-223)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
