@@ -22,6 +22,7 @@
 * [Inline Class (215)](#inline-class-215)
 * [Hide Delegate (218)](#hide-delegate-218)
 * [Remove Middle Man (220)](#remove-middle-man-220)
+* [Substitute Algorithm (220)](#substitute-algorithm-223)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -215,6 +216,14 @@ Dessa forma, caso _Department_ mude a sua interface, o impacto será apenas em _
 ### Remove Middle Man (220)
 Certamente existem vantagens em utilizar o _Hide Delegate_, porém, a sua desvantagem é que, sempre que um cliente precisar
 de um método do objeto delegado, o _middle man_ precisará implementar um método simples.
+
+[Back to Top](#basic-refactorings)
+
+### Substitute Algorithm (223)
+Existem muitas formas de fazer uma mesma tarefa. Algumas são mais fáceis que outras. Se eu achar uma maneira mais simples
+de fazer algo, substituirei o modo mais complicado pelo mais claro. 
+
+Exemplo: utilizar uma _library_ ao invés de utilizar uma implementação complexa.
 
 [Back to Top](#basic-refactorings)
 
