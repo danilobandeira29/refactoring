@@ -221,7 +221,7 @@ de um método do objeto delegado, o _middle man_ precisará implementar um méto
 
 ### Substitute Algorithm (223)
 Existem muitas formas de fazer uma mesma tarefa. Algumas são mais fáceis que outras. Se eu achar uma maneira mais simples
-de fazer algo, substituirei o modo mais complicado pelo mais claro. 
+de fazer algo, substituirei o modo mais complicado pelo modo mais claro. 
 
 Exemplo: utilizar uma _library_ ao invés de utilizar uma implementação complexa.
 
