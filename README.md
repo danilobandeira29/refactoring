@@ -24,6 +24,9 @@
 * [Remove Middle Man (220)](#remove-middle-man-220)
 * [Substitute Algorithm (223)](#substitute-algorithm-223)
 
+## Moving Features
+* [Move Function (225)](#move-function-225)
+
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
 Se voce investe tempo para tentar entender o que um bloco de código faz, transforme-o numa função com um nome que descreva o seu comportamento.
@@ -224,6 +227,12 @@ Existem muitas formas de fazer uma mesma tarefa. Algumas são mais fáceis que o
 de fazer algo, substituirei o modo mais complicado pelo modo mais claro. 
 
 Exemplo: utilizar uma _library_ ao invés de utilizar uma implementação complexa.
+
+[Back to Top](#basic-refactorings)
+
+### Move Function (225)
+Um bom motivo para mover funções é quando ela referencia mais elementos de outros contextos do que do contexto em que se
+encontra no momento. Dessa forma, outras partes do software serão menos independentes dos detalhes desse módulo.
 
 [Back to Top](#basic-refactorings)
 
