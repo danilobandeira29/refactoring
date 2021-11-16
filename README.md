@@ -242,8 +242,8 @@ Sempre crie estruturas de dados com um bom design orientado ao domínio(DDD), po
 estruturas de dados.
 
 Use essa refatoração sempre que possuir estruturas de dados com defeitos. 
-Ou quando perceber que tem sempre que passar um campo de um registro quando passo outro registro para uma função. 
-É melhor que porções de dados que são sempre passados em conjunto estejam num único registro para que seu relacionamento 
+Ou quando perceber que tem sempre que passar um campo de um registro quando passa outro registro para uma função. 
+É melhor que porções de dados que são sempre passados em conjunto estejam num único registro para que o seu relacionamento 
 esteja claro.
 
 [Back to Top](#basic-refactorings)
