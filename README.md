@@ -26,6 +26,7 @@
 
 ## Moving Features
 * [Move Function (225)](#move-function-225)
+* [Move Field (235)](#move-field-235)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -233,6 +234,17 @@ Exemplo: utilizar uma _library_ ao invés de utilizar uma implementação comple
 ### Move Function (225)
 Um bom motivo para mover funções é quando ela referencia mais elementos de outros contextos do que do contexto em que se
 encontra no momento. Dessa forma, outras partes do software serão menos independentes dos detalhes desse módulo.
+
+[Back to Top](#basic-refactorings)
+
+### Move Field (235)
+Sempre crie estruturas de dados com um bom design orientado ao domínio(DDD), pois geralmente isso ajuda a criar boas 
+estruturas de dados.
+
+Use essa refatoração sempre que possuir estruturas de dados com defeitos. 
+Ou quando perceber que tem sempre que passar um campo de um registro quando passo outro registro para uma função. 
+É melhor que porções de dados que são sempre passados em conjunto estejam num único registro para que seu relacionamento 
+esteja claro.
 
 [Back to Top](#basic-refactorings)
 
