@@ -27,6 +27,7 @@
 ## Moving Features
 * [Move Function (225)](#move-function-225)
 * [Move Field (235)](#move-field-235)
+* [Move Statements into Function (241)](#move-statements-into-function-241)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -245,6 +246,13 @@ Use essa refatoração sempre que possuir estruturas de dados com defeitos.
 Ou quando perceber que tem sempre que passar um campo de um registro quando passa outro registro para uma função. 
 É melhor que porções de dados que são sempre passados em conjunto estejam num único registro para que o seu relacionamento 
 esteja claro.
+
+[Back to Top](#basic-refactorings)
+
+### Move Statements into Function (241)
+Para se ter um código saudável é imprescindível remover duplicação de um código. Se você ver o mesmo código executado
+sempre que chamar uma função, mova o código executado para dentro da função. Assim, quaisquer modificações futuras serão
+feitas num só lugar e usadas em todos os lugares que o chamam.
 
 [Back to Top](#basic-refactorings)
 
