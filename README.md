@@ -250,7 +250,7 @@ esteja claro.
 [Back to Top](#basic-refactorings)
 
 ### Move Statements into Function (241)
-Para se ter um código saudável é imprescindível remover duplicação de um código. Se você ver o mesmo código executado
+Remover duplicação é uma das melhores regras gerais de um código saudável. Se você ver o mesmo código executado
 sempre que chamar uma função, mova o código executado para dentro da função. Assim, quaisquer modificações futuras serão
 feitas num só lugar e usadas em todos os lugares que o chamam.
 
