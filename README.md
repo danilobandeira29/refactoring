@@ -262,7 +262,7 @@ As funções devem ter apenas uma responsabilidade, mas com o tempo acabam cresc
 responsabilidades.
 
 Use quando uma função for chamada em vários lugares e variar em algumas delas. O código que varia deve ser 
-extraído da função e ser utilizado diretamente em que chama.
+extraído da função e ser utilizado diretamente em quem chama.
 
 [Back to Top](#basic-refactorings)
 
