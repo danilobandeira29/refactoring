@@ -29,6 +29,7 @@
 * [Move Field (235)](#move-field-235)
 * [Move Statements into Function (241)](#move-statements-into-function-241)
 * [Move Statements to Callers (245)](#move-statements-to-callers-245)
+* [Replace Inline Code with Function Call (251)](#replace-inline-code-with-function-call-251)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -263,6 +264,14 @@ responsabilidades.
 
 Use quando uma função for chamada em vários lugares e variar em algumas delas. O código que varia deve ser 
 extraído da função e ser utilizado diretamente em quem chama.
+
+[Back to Top](#basic-refactorings)
+
+### Replace Inline Code with Function Call (251)
+Similar o _Move Statements into Function_, mas sem uma função preexistente.
+
+Use para substituir um código _inline_ por uma chamada de função. Dessa forma, é possível dar um nome para a função que 
+explique o seu _propósito_ e não o seu _funcionamento_.
 
 [Back to Top](#basic-refactorings)
 
