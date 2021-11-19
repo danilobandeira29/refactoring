@@ -28,6 +28,7 @@
 * [Move Function (225)](#move-function-225)
 * [Move Field (235)](#move-field-235)
 * [Move Statements into Function (241)](#move-statements-into-function-241)
+* [Move Statements to Callers (245)](#move-statements-to-callers-245)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -253,6 +254,15 @@ esteja claro.
 Remover duplicação é uma das melhores regras gerais de um código saudável. Se você ver o mesmo código executado
 sempre que chamar uma função, mova o código executado para dentro da função. Assim, quaisquer modificações futuras serão
 feitas num só lugar e usadas em todos os lugares que o chamam.
+
+[Back to Top](#basic-refactorings)
+
+### Move Statements to Callers (245)
+As funções devem ter apenas uma responsabilidade, mas com o tempo acabam crescendo e ficando com duas ou mais
+responsabilidades.
+
+Use quando uma função for chamada em vários lugares e variar em algumas delas. O código que varia deve ser 
+extraído da função e ser utilizado diretamente em que chama.
 
 [Back to Top](#basic-refactorings)
 
