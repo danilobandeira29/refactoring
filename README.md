@@ -30,6 +30,7 @@
 * [Move Statements into Function (241)](#move-statements-into-function-241)
 * [Move Statements to Callers (245)](#move-statements-to-callers-245)
 * [Replace Inline Code with Function Call (251)](#replace-inline-code-with-function-call-251)
+* [Slide Statements (252)](#slide-statements-252)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -272,6 +273,18 @@ Similar o _Move Statements into Function_, mas sem uma função preexistente.
 
 Use para substituir um código _inline_ por uma chamada de função. Dessa forma, é possível dar um nome para a função que 
 explique o seu _propósito_ e não o seu _funcionamento_.
+
+[Back to Top](#basic-refactorings)
+
+### Slide Statements (252)
+Um código torna-se mais fácil de entender se todos os elementos relacionados aparecem juntos. Logo, é ideal para observar 
+estruturas de dados e onde elas são manipuladas, facilitando o meu entendimento.
+
+Geralmente utilizado como passo preparatório para outra refatoração como, por exemplo, _Extract Function_.
+
+Tome cuidado ao mover códigos que possam ter efeitos colaterais. Para evitar isso, é interessante aplicar
+o _Command-Query Separation_, dessa forma qualquer função que devolva um valor está livre de efeitos colaterais.
+Caso não tenha tanto controle sobre o código, criar testes robustos que possibilitem capturar falhas.
 
 [Back to Top](#basic-refactorings)
 
