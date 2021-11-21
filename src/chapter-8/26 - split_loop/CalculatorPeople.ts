@@ -9,9 +9,5 @@ function totalSalary(people: PeopleDto[]): number {
 }
 
 function youngestAge(people: PeopleDto[]): number {
-    let youngest_age = people[0].age || Infinity;
-    for(const p of people) {
-        if (p.age < youngest_age) youngest_age = p.age;
-    }
-    return youngest_age;
+    return Math.min(...people.map(p => p.age));
 }
