@@ -31,6 +31,7 @@
 * [Move Statements to Callers (245)](#move-statements-to-callers-245)
 * [Replace Inline Code with Function Call (251)](#replace-inline-code-with-function-call-251)
 * [Slide Statements (252)](#slide-statements-252)
+* [Split Loop (257)](#split-loop-257)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -285,6 +286,15 @@ Geralmente utilizado como passo preparatório para outra refatoração como, por
 Tome cuidado ao mover códigos que possam ter efeitos colaterais. Para evitar isso, é interessante aplicar
 o _Command-Query Separation_, dessa forma qualquer função que devolva um valor está livre de efeitos colaterais.
 Caso não tenha tanto controle sobre o código, criar testes robustos que possibilitem capturar falhas.
+
+[Back to Top](#basic-refactorings)
+
+### Split Loop (257)
+Muitas vezes fazemos mais de uma tarefa num loop, porém, sempre que for necessário modificar uma dessas tarefas teremos
+que entender ambas.
+
+Utilize para separar responsabilidades. Também como forma preparatória para outras refatorações, por exemplo, _Extract Function_ e/ou 
+_Replace Loop with Pipeline_.
 
 [Back to Top](#basic-refactorings)
 
