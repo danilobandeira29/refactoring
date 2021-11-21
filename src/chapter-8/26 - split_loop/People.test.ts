@@ -1,6 +1,6 @@
-import calculatorPeople from "./CalculatorPeople";
+import People from "./People";
 
-describe("CalculatorPeople suite", function() {
+describe("People suite", function() {
     it("should return 24 for the youngest age and 21000 for total salary", function() {
         const people_dto = [
             {
@@ -19,7 +19,6 @@ describe("CalculatorPeople suite", function() {
                 salary: 10000
             }
         ];
-        const calc = calculatorPeople(people_dto);
-        expect(calc).toEqual(`youngest_age: 24, total_salary: 21000`);
+        expect(new People(people_dto).calculate()).toEqual(`youngest_age: 24, total_salary: 21000`);
     })
 })
