@@ -5,11 +5,7 @@ export default function calculatorPeople(people: PeopleDto[]): string {
 }
 
 function totalSalary(people: PeopleDto[]): number {
-    let total_salary = 0;
-    for(const p of people) {
-        total_salary += p.salary;
-    }
-    return total_salary;
+    return people.reduce((acc, p) => acc + p.salary, 0);
 }
 
 function youngestAge(people: PeopleDto[]): number {
