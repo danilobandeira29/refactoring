@@ -293,8 +293,8 @@ Caso não tenha tanto controle sobre o código, criar testes robustos que possib
 Muitas vezes fazemos mais de uma tarefa num loop. Dessa forma, sempre que for necessário modificar uma dessas tarefas teremos
 que entender ambas.
 
-Utilize para separar responsabilidades. Também pode ser usado como forma preparatória para outras refatorações, por exemplo, _Extract Function_ e/ou 
-_Replace Loop with Pipeline_.
+Utilize para separar responsabilidades. Também pode ser usado como forma preparatória para outras refatorações, 
+por exemplo, _Extract Function_.
 
 [Back to Top](#basic-refactorings)
 
