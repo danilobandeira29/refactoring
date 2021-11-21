@@ -1,13 +1,21 @@
 import PeopleDto from "./PeopleDto";
 
-export default function calculatorPeople(people: PeopleDto[]): string {
-    return `youngest_age: ${youngestAge(people)}, total_salary: ${totalSalary(people)}`;
-}
+export default class People {
+    private people: PeopleDto[];
 
-function totalSalary(people: PeopleDto[]): number {
-    return people.reduce((acc, p) => acc + p.salary, 0);
-}
+    constructor(dto: PeopleDto[]) {
+        this.people = dto;
+    }
 
-function youngestAge(people: PeopleDto[]): number {
-    return Math.min(...people.map(p => p.age));
+    calculate(): string {
+        return `youngest_age: ${this.youngestAge()}, total_salary: ${this.totalSalary()}`;
+    }
+
+    youngestAge(): number {
+        return Math.min(...this.people.map(p => p.age));
+    }
+
+    totalSalary(): number {
+        return this.people.reduce((acc, p) => acc + p.salary, 0);
+    }
 }
