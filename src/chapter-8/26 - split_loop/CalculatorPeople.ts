@@ -1,9 +1,7 @@
 import PeopleDto from "./PeopleDto";
 
 export default function calculatorPeople(people: PeopleDto[]): string {
-    const total_salary = totalSalary(people);
-    const youngest_age = youngestAge(people);
-    return `youngest_age: ${youngest_age}, total_salary: ${total_salary}`;
+    return `youngest_age: ${youngestAge(people)}, total_salary: ${totalSalary(people)}`;
 }
 
 function totalSalary(people: PeopleDto[]): number {
