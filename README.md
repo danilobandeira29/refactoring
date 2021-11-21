@@ -290,7 +290,7 @@ Caso não tenha tanto controle sobre o código, criar testes robustos que possib
 [Back to Top](#basic-refactorings)
 
 ### Split Loop (257)
-Muitas vezes fazemos mais de uma tarefa num loop, porém, sempre que for necessário modificar uma dessas tarefas teremos
+Muitas vezes fazemos mais de uma tarefa num loop. Dessa forma, sempre que for necessário modificar uma dessas tarefas teremos
 que entender ambas.
 
 Utilize para separar responsabilidades. Também como forma preparatória para outras refatorações, por exemplo, _Extract Function_ e/ou 
