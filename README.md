@@ -32,6 +32,7 @@
 * [Replace Inline Code with Function Call (251)](#replace-inline-code-with-function-call-251)
 * [Slide Statements (252)](#slide-statements-252)
 * [Split Loop (257)](#split-loop-257)
+* [Replace Loop with Pipeline(261)](#replace-loop-with-pipeline-261)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -295,6 +296,11 @@ que entender ambas.
 
 Utilize para separar responsabilidades. Também pode ser usado como forma preparatória para outras refatorações, 
 por exemplo, _Extract Function_.
+
+[Back to Top](#basic-refactorings)
+
+### Replace Loop with Pipeline (261)
+Utilize _Collection Pipelines_(`map`, `filter` e afins) para maior legibilidade na manipulação de coleção de objetos. 
 
 [Back to Top](#basic-refactorings)
 
