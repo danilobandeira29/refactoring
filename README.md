@@ -41,7 +41,6 @@ Se voce investe tempo para tentar entender o que um bloco de código faz, transf
 
 [Back to Top](#basic-refactorings)
 
-
 ### Inline Function (144)
 Oposto do _Extract Function_. Utilizar quando o corpo da função consegue descrever o seu próprio comportamento.
 Excelente quando existem muitas chamadas indiretas de função(uma função que chama outra, onde o corpo da segunda já descreve o comportamento).
@@ -306,7 +305,7 @@ Utilize _Collection Pipelines_(`map`, `filter` e afins) para maior legibilidade 
 [Back to Top](#basic-refactorings)
 
 ### Remove Dead Code (267)
-Remover código que não é utilizado. Não deixar o código como comentário. Dessa forma, evita outros
+Remover o código que não é utilizado. Não deixar o código como comentário. Dessa forma, evita outros
 programadores a lerem um código que não possuí nenhum efeito.
 
 [Back to Top](#basic-refactorings)
