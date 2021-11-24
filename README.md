@@ -35,6 +35,10 @@
 * [Replace Loop with Pipeline(261)](#replace-loop-with-pipeline-261)
 * [Remove Dead Code(267)](#remove-dead-code-267)
 
+## Organizing Data
+* [Split Variable(269)](#split-variable-269)
+
+
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
 Se voce investe tempo para tentar entender o que um bloco de código faz, transforme-o numa função com um nome que descreva o seu comportamento.
@@ -307,6 +311,14 @@ Utilize _Collection Pipelines_(`map`, `filter` e afins) para maior legibilidade 
 ### Remove Dead Code (267)
 Remover o código que não é utilizado. Não deixar o código como comentário. Dessa forma, evita outros
 programadores a lerem um código que não possuí nenhum efeito.
+
+[Back to Top](#basic-refactorings)
+
+### Split Variable (269)
+Variável que recebe valor mais de uma vez é sinal que possuí mais que uma responsabilidade no método. Qualquer variável
+com mais de uma responsabilidade deve ser substituída por diversas variáveis, uma para cada responsabilidade.
+
+Variável acumuladora tem apenas uma responsabilidade, então não se encaixa nessa refatoração.
 
 [Back to Top](#basic-refactorings)
 
