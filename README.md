@@ -33,6 +33,7 @@
 * [Slide Statements (252)](#slide-statements-252)
 * [Split Loop (257)](#split-loop-257)
 * [Replace Loop with Pipeline(261)](#replace-loop-with-pipeline-261)
+* [Remove Dead Code(267)](#remove-dead-code-267)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -301,6 +302,12 @@ por exemplo, _Extract Function_.
 
 ### Replace Loop with Pipeline (261)
 Utilize _Collection Pipelines_(`map`, `filter` e afins) para maior legibilidade na manipulação de coleção de objetos. 
+
+[Back to Top](#basic-refactorings)
+
+### Remove Dead Code (267)
+Remover código que não é utilizado. Não deixar o código como comentário. Dessa forma, evita outros
+programadores a lerem um código que não possuí nenhum efeito.
 
 [Back to Top](#basic-refactorings)
 
