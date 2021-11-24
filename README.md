@@ -150,7 +150,7 @@ Fowler prefere objetos a estrutura de dados quando trabalha com dados mutáveis,
 apenas os comportamentos, um para cada valor acima, por exemplo. Além disso, o _client_ de um objeto não saberá a estrutura interna 
 nem como a lógica de cálculo está implementada, possibilitando assim fazer alterações mais facilmente.
 
-[Back to Top](#basic-refactorings)
+[Back to Top](#encapsulation)
 
 ### Encapsulate Collection (198)
 Caso especial do _Encapsulate Record_.
@@ -162,7 +162,7 @@ e manipular sem que o _Encapsulated Record_ possa intervir, quebrando o encapsul
 
 O ideal, é devolver uma cópia da coleção e oferecer ao _client_ métodos para manipulação da _coleção_ a partir do _Encapsulated Record_(métodos _add_, _remove_ e _access_).
 
-[Back to Top](#basic-refactorings)
+[Back to Top](#encapsulation)
 
 ### Replace Primitive with Object (203)
 Nas etapas iniciais do desenvolvimento de software, tomamos a decisão de representar valores como tipo primitivo, 
@@ -172,7 +172,7 @@ Um CPF pode ser representado sem ou com formatação, ter necessidade de validar
 
 O ideal é encapsular esses valores para que, futuramente, possam ser adicionados comportamentos.
 
-[Back to Top](#basic-refactorings)
+[Back to Top](#encapsulation)
 
 ### Replace Temp with Query (207)
 Variáveis temporárias são usadas para capturar o valor de um código de modo a referenciá-lo mais tarde numa função, além 
@@ -187,7 +187,7 @@ Essa refatoração funciona melhor em classe, pois existe um contexto compartilh
 uma classe, pode correr o risco de ter muitos parâmetros numa função de nível mais alto, perdendo boa parte das vantagens 
 de usar uma função.
 
-[Back to Top](#basic-refactorings)
+[Back to Top](#encapsulation)
 
 ### Extract Class (211)
 Uma Classe deve ser uma abstração nítida, deve lidar apenas com algumas responsabilidades claras.
@@ -196,7 +196,7 @@ Uma Classe cresce e acaba ficando cheias de responsabilidades, pois você julga 
 Um bom sinal de que uma Classe deve ser dividida em outra(s) é quando um subconjunto dos dados e um subconjunto dos métodos
 parecem formar um conjunto. Outro sinal é quando um subconjunto de dados mudam juntos.
 
-[Back to Top](#basic-refactorings)
+[Back to Top](#encapsulation)
 
 ### Inline Class (215)
 Às vezes, uma Classe extraída não vale mais a pena, ela não deveria existir. Isso é resultado de mover responsabilidade 
@@ -210,7 +210,7 @@ Esta é a abordagem genérica para reorganizar o código: às vezes, é mais fá
 outras vezes, porém, é melhor usar _Inline Class_ para reunir os contextos e depois usar _Extract Class_ para separar em 
 elementos diferentes.
 
-[Back to Top](#basic-refactorings)
+[Back to Top](#encapsulation)
 
 ### Hide Delegate (218)
 O segredo para um bom design modular é o encapsulamento. Um encapsulamento significa que módulos precisam saber menos 
@@ -225,13 +225,13 @@ palavras, alguns métodos de _Person_ irão encapsular as chamadas para os méto
 
 Dessa forma, caso _Department_ mude a sua interface, o impacto será apenas em _Person_.
 
-[Back to Top](#basic-refactorings)
+[Back to Top](#encapsulation)
 
 ### Remove Middle Man (220)
 Certamente existem vantagens em utilizar o _Hide Delegate_, porém, a sua desvantagem é que, sempre que um cliente precisar
 de um método do objeto delegado, o _middle man_ precisará implementar um método simples.
 
-[Back to Top](#basic-refactorings)
+[Back to Top](#encapsulation)
 
 ### Substitute Algorithm (223)
 Existem muitas formas de fazer uma mesma tarefa. Algumas são mais fáceis que outras. Se eu achar uma maneira mais simples
@@ -239,13 +239,13 @@ de fazer algo, substituirei o modo mais complicado pelo modo mais claro.
 
 Exemplo: utilizar uma _library_ ao invés de utilizar uma implementação complexa.
 
-[Back to Top](#basic-refactorings)
+[Back to Top](#encapsulation)
 
 ### Move Function (225)
 Um bom motivo para mover funções é quando ela referencia mais elementos de outros contextos do que do contexto em que se
 encontra no momento. Dessa forma, outras partes do software serão menos independentes dos detalhes desse módulo.
 
-[Back to Top](#basic-refactorings)
+[Back to Top](#moving-features)
 
 ### Move Field (235)
 Sempre crie estruturas de dados com um bom design orientado ao domínio(DDD), pois geralmente isso ajuda a criar boas 
@@ -256,14 +256,14 @@ Ou quando perceber que tem sempre que passar um campo de um registro quando pass
 É melhor que porções de dados que são sempre passados em conjunto estejam num único registro para que o seu relacionamento 
 esteja claro.
 
-[Back to Top](#basic-refactorings)
+[Back to Top](#moving-features)
 
 ### Move Statements into Function (241)
 Remover duplicação é uma das melhores regras gerais de um código saudável. Se você ver o mesmo código executado
 sempre que chamar uma função, mova o código executado para dentro da função. Assim, quaisquer modificações futuras serão
 feitas num só lugar e usadas em todos os lugares que o chamam.
 
-[Back to Top](#basic-refactorings)
+[Back to Top](#moving-features)
 
 ### Move Statements to Callers (245)
 As funções devem ter apenas uma responsabilidade, mas com o tempo acabam crescendo e ficando com duas ou mais
@@ -272,7 +272,7 @@ responsabilidades.
 Use quando uma função for chamada em vários lugares e variar em algumas delas. O código que varia deve ser 
 extraído da função e ser utilizado diretamente em quem chama.
 
-[Back to Top](#basic-refactorings)
+[Back to Top](#moving-features)
 
 ### Replace Inline Code with Function Call (251)
 Similar o _Move Statements into Function_, mas sem uma função preexistente.
@@ -280,7 +280,7 @@ Similar o _Move Statements into Function_, mas sem uma função preexistente.
 Use para substituir um código _inline_ por uma chamada de função. Dessa forma, é possível dar um nome para a função que 
 explique o seu _propósito_ e não o seu _funcionamento_.
 
-[Back to Top](#basic-refactorings)
+[Back to Top](#moving-features)
 
 ### Slide Statements (252)
 Um código torna-se mais fácil de entender se todos os elementos relacionados aparecem juntos. Logo, é ideal para observar 
@@ -292,7 +292,7 @@ Tome cuidado ao mover códigos que possam ter efeitos colaterais. Para evitar is
 o _Command-Query Separation_, dessa forma qualquer função que devolva um valor está livre de efeitos colaterais.
 Caso não tenha tanto controle sobre o código, criar testes robustos que possibilitem capturar falhas.
 
-[Back to Top](#basic-refactorings)
+[Back to Top](#moving-features)
 
 ### Split Loop (257)
 Muitas vezes fazemos mais de uma tarefa num loop. Dessa forma, sempre que for necessário modificar uma dessas tarefas teremos
@@ -301,18 +301,18 @@ que entender ambas.
 Utilize para separar responsabilidades. Também pode ser usado como forma preparatória para outras refatorações, 
 por exemplo, _Extract Function_.
 
-[Back to Top](#basic-refactorings)
+[Back to Top](#moving-features)
 
 ### Replace Loop with Pipeline (261)
 Utilize _Collection Pipelines_(`map`, `filter` e afins) para maior legibilidade na manipulação de coleção de objetos. 
 
-[Back to Top](#basic-refactorings)
+[Back to Top](#moving-features)
 
 ### Remove Dead Code (267)
 Remover o código que não é utilizado. Não deixar o código como comentário. Dessa forma, evita outros
 programadores a lerem um código que não possuí nenhum efeito.
 
-[Back to Top](#basic-refactorings)
+[Back to Top](#moving-features)
 
 ### Split Variable (269)
 Variável que recebe valor mais de uma vez é sinal que possuí mais que uma responsabilidade no método. Qualquer variável
@@ -320,6 +320,6 @@ com mais de uma responsabilidade deve ser substituída por diversas variáveis, 
 
 Variável acumuladora tem apenas uma responsabilidade, então não se encaixa nessa refatoração.
 
-[Back to Top](#basic-refactorings)
+[Back to Top](#organizing-data)
 
 Inspirado por: https://gist.github.com/cs-cordero/3799f26699bdecdb286fd719f08122af
