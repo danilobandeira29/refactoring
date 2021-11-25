@@ -326,7 +326,7 @@ Variável acumuladora tem apenas uma responsabilidade, então não se encaixa ne
 ### Rename Field (273)
 Nomes são importantes, principalmente se são nomes de campos de um objeto(_record_) amplamente utilizado.
 
-Utilize sempre que precisar de um bom nome para refletir o real valor de um campo.
+Utilize sempre que precisar de um bom nome para refletir o real significado de um campo.
 
 [Back to Top](#organizing-data)
 
