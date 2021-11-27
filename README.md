@@ -332,7 +332,7 @@ Utilize sempre que precisar de um bom nome para refletir o real significado de u
 [Back to Top](#organizing-data)
 
 ### Replace Derived Variable with Query (277)
-Utilize quando o _uso_ da variável está distante dos locais que ela pode sofrer mutação. Ao invés de ter uma variável que
+Utilize quando o _uso_ da variável está distante dos locais em que ela pode sofrer mutação. Ao invés de ter uma variável que
 seja acumuladora, prefira fazer o cálculo sob demanda. Dessa forma, torna-se mais fácil rastrear os valores da variável.
 
 [Back to Top](#organizing-data)
