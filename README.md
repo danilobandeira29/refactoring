@@ -38,6 +38,7 @@
 ## Organizing Data
 * [Split Variable(269)](#split-variable-269)
 * [Rename Field(273)](#rename-field-273)
+* [Replace Derived Variable with Query(277)](#replace-derived-variable-with-query-277)
 
 
 ### Extract Function (134)
@@ -329,5 +330,13 @@ Nomes são importantes, principalmente se são nomes de campos de um objeto(_rec
 Utilize sempre que precisar de um bom nome para refletir o real significado de um campo.
 
 [Back to Top](#organizing-data)
+
+### Replace Derived Variable with Query (277)
+Utilize quando o _uso_ da variável está distante dos locais que ela pode sofrer mutação. Ao invés de ter uma variável que
+seja acumuladora, prefira fazer o cálculo sob demanda. Dessa forma, será possível identificar um ponto onde o valor da 
+variável é conhecido.
+
+[Back to Top](#organizing-data)
+
 
 Inspirado por: https://gist.github.com/cs-cordero/3799f26699bdecdb286fd719f08122af
