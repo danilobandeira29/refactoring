@@ -340,7 +340,10 @@ seja acumuladora, prefira fazer o cálculo sob demanda. Dessa forma, torna-se ma
 
 ### Change Reference to Value (281)
 Fowler defende que, de modo geral, é mais fácil trabalhar com dados imutáveis, pois é possível passar o objeto para 
-diferentes contextos sem se preocupar que o seu valor seja alterado.
+diferentes contextos sem se preocupar que o seu valor seja alterado. 
+
+Caso precise que o objeto seja manipulado e observado
+por diferentes contextos, é melhor trata-lo como referência, ou seja, aplicar _Change Value to Reference_.
 
 [Back to Top](#organizing-data)
 
