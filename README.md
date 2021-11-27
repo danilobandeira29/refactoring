@@ -39,6 +39,7 @@
 * [Split Variable(269)](#split-variable-269)
 * [Rename Field(273)](#rename-field-273)
 * [Replace Derived Variable with Query(277)](#replace-derived-variable-with-query-277)
+* [Change Reference to Value(281)](#change-reference-to-value-281)
 
 
 ### Extract Function (134)
@@ -336,6 +337,13 @@ Utilize quando o _uso_ da variável está distante dos locais em que ela pode so
 seja acumuladora, prefira fazer o cálculo sob demanda. Dessa forma, torna-se mais fácil rastrear os valores da variável.
 
 [Back to Top](#organizing-data)
+
+### Change Reference to Value (281)
+Fowler defende que, de modo geral, é mais fácil trabalhar com dados imutáveis, pois é possível passar o objeto para 
+diferentes contextos sem se preocupar que o seu valor seja alterado.
+
+[Back to Top](#organizing-data)
+
 
 
 Inspirado por: https://gist.github.com/cs-cordero/3799f26699bdecdb286fd719f08122af
