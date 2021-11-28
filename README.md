@@ -40,6 +40,7 @@
 * [Rename Field(273)](#rename-field-273)
 * [Replace Derived Variable with Query(277)](#replace-derived-variable-with-query-277)
 * [Change Reference to Value(281)](#change-reference-to-value-281)
+* [Change Value to Reference(284)](#change-value-to-reference-284)
 
 
 ### Extract Function (134)
@@ -347,6 +348,12 @@ por diferentes contextos, é melhor trata-lo como referência, ou seja, aplicar 
 
 [Back to Top](#organizing-data)
 
+### Change Value to Reference (284)
+Inversa de _Change Reference to Value_. Utilize quando precisar manipular algum objeto que está presente em diversos contextos.
+ Assim, haverá apenas uma referência de uma entidade sendo tratada por todos os contextos necessários, ao invés de ter vários
+_Value Object_ espalhados por contextos.
+
+[Back to Top](#organizing-data)
 
 
 Inspirado por: https://gist.github.com/cs-cordero/3799f26699bdecdb286fd719f08122af
