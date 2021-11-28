@@ -349,9 +349,11 @@ por diferentes contextos, é melhor trata-lo como referência, ou seja, aplicar 
 [Back to Top](#organizing-data)
 
 ### Change Value to Reference (284)
-Inversa de _Change Reference to Value_. Utilize quando precisar manipular algum objeto que está presente em diversos contextos.
- Assim, haverá apenas uma referência de uma entidade sendo tratada por todos os contextos necessários, ao invés de ter vários
-_Value Object_ espalhados por contextos.
+Inversa de _Change Reference to Value_. 
+
+Utilize quando precisar manipular algum objeto que é compartilhado entre diferentes contextos. Assim, haverá apenas uma 
+referência de uma entidade sendo tratada por todos os contextos necessários, ao invés de ter vários _Value Object_ 
+espalhados por contextos do qual iriam gerar inconsistência.
 
 [Back to Top](#organizing-data)
 
