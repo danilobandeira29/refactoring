@@ -42,6 +42,9 @@
 * [Change Reference to Value(281)](#change-reference-to-value-281)
 * [Change Value to Reference(284)](#change-value-to-reference-284)
 
+## Simplifying Conditional Logic
+* [Decompose Conditional(288)](#decompose-conditional-288)
+
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -356,6 +359,14 @@ referência de uma entidade sendo tratada por todos os contextos necessários, a
 espalhados por contextos do qual iriam gerar inconsistência.
 
 [Back to Top](#organizing-data)
+
+### Decompose Conditional (288)
+Caso especial de _Extract Function_.
+
+Utilize quando existirem condicionais complexas. Transforme o parâmetro do `if` numa chamada de função que revela a sua 
+intenção. Faça isso para cada ramificação, e para o corpo de cada uma delas. No final de tudo, saberá _o que acontece_ e o _por que_.
+
+[Back to Top](#simplifying-conditional-logic)
 
 
 Inspirado por: https://gist.github.com/cs-cordero/3799f26699bdecdb286fd719f08122af
