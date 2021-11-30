@@ -44,6 +44,7 @@
 
 ## Simplifying Conditional Logic
 * [Decompose Conditional(288)](#decompose-conditional-288)
+* [Consolidate Conditional Expression(291)](#consolidate-conditional-expression-291)
 
 
 ### Extract Function (134)
@@ -365,6 +366,15 @@ Caso especial de _Extract Function_.
 
 Utilize quando existirem condicionais complexas. Transforme o parâmetro do `if` numa chamada de função que revela a sua 
 intenção. Faça isso para cada ramificação, e para o corpo de cada uma delas. No final de tudo, saberá _o que acontece_ e o _por que_.
+
+[Back to Top](#simplifying-conditional-logic)
+
+### Consolidate Conditional Expression (291)
+Utilize quando houver condicionais em que cada verificação difere, porém, a ação resultante é a mesma.
+
+Ao aplicar essa refatoração, é possível usar _Extract Function_. Dessa forma, saberá o _por que acontece_ ao invés de _como acontece_.
+
+Não utilizar caso as verificações tiverem uma ação resultante diferente.
 
 [Back to Top](#simplifying-conditional-logic)
 
