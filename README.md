@@ -45,6 +45,7 @@
 ## Simplifying Conditional Logic
 * [Decompose Conditional(288)](#decompose-conditional-288)
 * [Consolidate Conditional Expression(291)](#consolidate-conditional-expression-291)
+* [Replace Nested Conditional with Guard Clauses(294)](#replace-nested-conditional-with-guard-clauses-294)
 
 
 ### Extract Function (134)
@@ -375,6 +376,18 @@ Utilize quando houver condicionais em que cada verificação difere, porém, a a
 Ao aplicar essa refatoração, é possível usar _Extract Function_. Dessa forma, saberá o _por que acontece_ ao invés de _como acontece_.
 
 Não utilizar caso as verificações tiverem uma ação resultante diferente.
+
+[Back to Top](#simplifying-conditional-logic)
+
+### Replace Nested Conditional with Guard Clauses (294)
+Existem dois tipos de expressões condicionais. No primeiro, os dois ramos da condicional fazem parte do _happy path_.
+No segundo, um ramo é o _happy path_ enquanto os demais são incomuns(exceções).
+
+Utilize quando houver condicionais aninhadas e complexas. Dessa forma, será possível diminuir a complexidade ciclomática,
+facilitando observar o _happy path_ da função.
+
+É possível aplicar _Guard Clause_ com a simples inversão das condicionais. Em alguns casos, basta ter um retorno imediato, sem a necessidade
+de inversão da condicional. Em todos os casos, começar pela condicional mais externa.
 
 [Back to Top](#simplifying-conditional-logic)
 
