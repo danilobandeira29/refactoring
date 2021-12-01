@@ -380,7 +380,7 @@ Não utilizar caso as verificações tiverem uma ação resultante diferente.
 [Back to Top](#simplifying-conditional-logic)
 
 ### Replace Nested Conditional with Guard Clauses (294)
-Existem dois tipos de expressões condicionais. No primeiro, os dois ramos da condicional fazem parte do _happy path_.
+Segundo Fowler, as expressões condicionais se apresentam em dois estilos. No primeiro, os dois ramos da condicional fazem parte do _happy path_.
 No segundo, um ramo é o _happy path_ enquanto os demais são incomuns(exceções).
 
 Utilize quando houver condicionais aninhadas e complexas. Dessa forma, será possível diminuir a complexidade ciclomática,
