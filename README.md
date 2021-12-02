@@ -395,7 +395,7 @@ de inversão da condicional. Em todos os casos, começar pela condicional mais e
 ### Replace Conditional with Polymorphism (299)
 Utilizar quando tiver condicionais complexas, que se repetem em diversas partes do código para gerar algum valor com base num tipo.
 
-Existem condicionais onde é possível implementar o caso base na superclasse e a variação ficará por conta da subclasse. 
+Existem casos onde a implementação base ficará na superclasse, por ser o caso mais comum ou o mais simples, então a variação ficará por conta da subclasse. 
 Em outros casos, todas as condicionais variam e não existe um caso base, logo, toda a implementação ficará na subclasse.
 
 [Back to Top](#simplifying-conditional-logic)
