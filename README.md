@@ -402,7 +402,7 @@ Em outros casos, todas as condicionais variam e não existe um caso base, logo, 
 [Back to Top](#simplifying-conditional-logic)
 
 ### Introduce Special Case (318)
-Utilizar quando tiver condicionais repetidas que buscam por um valor específico, implementado por diferentes clientes. Por exemplo, verificar por _null_ em alguma propriedade de um objeto. 
+Utilizar quando tiver condicional que busca por um valor específico, que acaba sendo repetida em todos os clientes. Por exemplo, verificar por _null_ em alguma propriedade de um objeto. 
 Ao invés de retornar _null_, deve ser retornado um objeto literal que represente o _null_, onde possuí os seus próprios métodos para valores _default_.
 
 Essa refatoração também é chamada de _Null Object Pattern_, porém, para Fowler, esse _pattern_ é um caso especial do _Special Case_.
