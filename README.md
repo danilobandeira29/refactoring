@@ -47,6 +47,7 @@
 * [Consolidate Conditional Expression(291)](#consolidate-conditional-expression-291)
 * [Replace Nested Conditional with Guard Clauses(294)](#replace-nested-conditional-with-guard-clauses-294)
 * [Replace Conditional with Polymorphism(299)](#replace-conditional-with-polymorphism-299)
+* [Introduce Special Case(318)](#introduce-special-case-318)
 
 
 ### Extract Function (134)
@@ -397,6 +398,14 @@ Utilizar quando tiver condicionais complexas, que se repetem em diversas partes 
 
 Existem casos onde a implementação base ficará na superclasse, por ser o caso mais comum ou o mais simples, então a variação ficará por conta da subclasse. 
 Em outros casos, todas as condicionais variam e não existe um caso base, logo, toda a implementação ficará na subclasse.
+
+[Back to Top](#simplifying-conditional-logic)
+
+### Introduce Special Case (318)
+Utilizar quando tiver condicionais repetidas que buscam por um valor específico, implementado por diferentes clientes. Por exemplo, verificar por _null_ em alguma propriedade de um objeto. 
+Ao invés de retornar _null_, deve ser retornado um objeto literal que represente o _null_, que possuí os seus próprios métodos para valores _default_.
+
+Essa refatoração também é chamada de _Null Object Pattern_, porém, para Fowler, esse _pattern_ é um caso especial do _Special Case_.
 
 [Back to Top](#simplifying-conditional-logic)
 
