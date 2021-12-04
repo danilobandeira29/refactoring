@@ -405,6 +405,9 @@ Em outros casos, todas as condicionais variam e não existe um caso base, logo, 
 Utilizar quando tiver condicional que busca por um valor específico, que acaba sendo repetida em diversos clientes. Por exemplo, verificar por _null_ em alguma propriedade de um objeto. 
 Ao invés de retornar _null_, deve ser retornado um objeto literal que represente o _null_, onde possuí os seus próprios métodos para valores _default_.
 
+_Special Case Object_ são sempre _Value Object_ e, dessa forma, deve ser sempre imutáveis, mesmo que os objetos que eles estejam substituindo não sejam. 
+Caso seja um objeto literal(objeto javascript, por exemplo), devo utilizar o _Object.freeze_ para lhe tornar imutável.
+
 Essa refatoração também é chamada de _Null Object Pattern_, porém, para Fowler, esse _pattern_ é um caso especial do _Special Case_.
 
 [Back to Top](#simplifying-conditional-logic)
