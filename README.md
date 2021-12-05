@@ -414,8 +414,10 @@ Essa refatoração também é chamada de _Null Object Pattern_, porém, para Fow
 [Back to Top](#simplifying-conditional-logic)
 
 ### Introduce Assertion (333)
-Utilize como último recurso para debug. _Assertion_ ajuda a sinalizar um erro do programador, além disso, comunica ao programador sobre o estado em que se supõe que esteja o programa
-no respectivo ponto de execução. Asserções não deve afetar a execução de um sistema, ou seja, o programa deve funcionar da mesma maneira com ou sem asserções.
+Utilize como último recurso para debug.
+
+_Assertion_ ajuda a sinalizar um erro do programador, além disso, comunica ao programador sobre o estado em que se supõe que esteja o programa
+no respectivo ponto de execução. Asserções não devem afetar a execução de um sistema, ou seja, o programa deve funcionar da mesma maneira com ou sem asserções.
 
 Um código autotestável reduz a importância das asserções na depuração.
 
