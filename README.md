@@ -416,7 +416,7 @@ Essa refatoração também é chamada de _Null Object Pattern_, porém, para Fow
 ### Introduce Assertion (333)
 Utilize como último recurso para debug.
 
-UmA falha numa asserção sinaliza um erro do programador, além disso, comunica-o sobre o estado em que se supõe que esteja o programa
+Uma falha numa asserção sinaliza um erro do programador, além disso, comunica-o sobre o estado em que se supõe que esteja o programa
 no respectivo ponto de execução. Asserções não devem afetar a execução de um sistema, ou seja, o programa deve funcionar da mesma maneira com ou sem elas.
 
 Um código autotestável reduz a importância das asserções na depuração.
