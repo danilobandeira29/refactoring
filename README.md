@@ -48,6 +48,7 @@
 * [Replace Nested Conditional with Guard Clauses(294)](#replace-nested-conditional-with-guard-clauses-294)
 * [Replace Conditional with Polymorphism(299)](#replace-conditional-with-polymorphism-299)
 * [Introduce Special Case(318)](#introduce-special-case-318)
+* [Introduce Assertion(333)](#introduce-assertion-333)
 
 
 ### Extract Function (134)
@@ -409,6 +410,14 @@ _Special Case Object_ são sempre _Value Object_ e, dessa forma, devem ser sempr
 Caso seja um objeto literal(objeto javascript, por exemplo), devo utilizar o _Object.freeze_ para lhe tornar imutável.
 
 Essa refatoração também é chamada de _Null Object Pattern_, porém, para Fowler, esse _pattern_ é um caso especial do _Special Case_.
+
+[Back to Top](#simplifying-conditional-logic)
+
+### Introduce Assertion (333)
+Utilize como último recurso para debug. _Assertion_ ajuda a sinalizar um erro do programador, além disso, comunica ao programador sobre o estado em que se supõe que esteja o programa
+no respectivo ponto de execução. Asserções não deve afetar a execução de um sistema, ou seja, o programa deve funcionar da mesma maneira com ou sem asserções.
+
+Um código autotestável reduz a importância das asserções na depuração.
 
 [Back to Top](#simplifying-conditional-logic)
 
