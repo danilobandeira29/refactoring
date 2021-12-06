@@ -50,6 +50,9 @@
 * [Introduce Special Case(318)](#introduce-special-case-318)
 * [Introduce Assertion(333)](#introduce-assertion-333)
 
+## Refactoring APIs
+* [Separate Query from Modifier(337)](#separate-query-from-modifier-337)
+
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -422,6 +425,14 @@ no respectivo ponto de execução. Asserções não devem afetar a execução de
 Um código autotestável reduz a importância das asserções na depuração.
 
 [Back to Top](#simplifying-conditional-logic)
+
+### Separate Query from Modifier (337)
+Segundo Fowler, funções que não possuem efeitos colaterais podem ser chamadas diversas vezes e serem inseridas em outras funções facilmente. Uma regra mencionada por ele é que:
+a função que devolve um valor não deve ter efeitos colaterais observáveis(_command-query separation_).
+
+Em casos de _cache_, onde é alterado o estado do objeto, a mudança não é observável, por isso essa refatoração não deve ser aplicada.
+
+[Back to Top](#refactoring-apis)
 
 
 Inspirado por: https://gist.github.com/cs-cordero/3799f26699bdecdb286fd719f08122af
