@@ -437,7 +437,7 @@ Em casos de _cache_, onde é alterado o estado do objeto, a mudança não é obs
 
 ### Parameterize Function (340)
 Utilize quando existirem funções que possuem uma lógica muita parecida que diferem apenas nos seus valores literais. 
-Dessa forma, a função irá atender a diversos casos, pois poderá ser usada com diferentes valores.
+Dessa forma, a função irá atender a diversos casos, pois poderá ser usada com valores diferentes.
 
 [Back to Top](#refactoring-apis)
 
