@@ -52,6 +52,7 @@
 
 ## Refactoring APIs
 * [Separate Query from Modifier(337)](#separate-query-from-modifier-337)
+* [Parameterize Function(340)](#parameterize-function-340)
 
 
 ### Extract Function (134)
@@ -431,6 +432,12 @@ Segundo Fowler, funções que não possuem efeitos colaterais podem ser chamadas
 a função que devolve um valor não deve ter efeitos colaterais observáveis(_command-query separation_).
 
 Em casos de _cache_, onde é alterado o estado do objeto, a mudança não é observável, por isso essa refatoração não deve ser aplicada.
+
+[Back to Top](#refactoring-apis)
+
+### Parameterize Function (340)
+Utilize quando existirem funções que possuem uma lógica muita parecida que diferem apenas nos seus valores literais. 
+Dessa forma, a função irá atender a diversos casos, pois poderá ser usada com diferentes valores.
 
 [Back to Top](#refactoring-apis)
 
