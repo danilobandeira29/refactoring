@@ -53,7 +53,7 @@
 ## Refactoring APIs
 * [Separate Query from Modifier(337)](#separate-query-from-modifier-337)
 * [Parameterize Function(340)](#parameterize-function-340)
-
+* [Remove Flag Argument(344)](#remove-flag-argument-344)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -441,5 +441,11 @@ Dessa forma, a função irá atender a diversos casos, pois poderá ser usada co
 
 [Back to Top](#refactoring-apis)
 
+### Remove Flag Argument (344)
+Utilizar uma flag como argumento para decidir qual fluxo a função deve seguir sinaliza que a função faz mais de uma coisa.
+
+Aplique para criar funções explícitas, que revelem a quem chama a sua verdadeira intenção.
+
+[Back to Top](#refactoring-apis)
 
 Inspirado por: https://gist.github.com/cs-cordero/3799f26699bdecdb286fd719f08122af
