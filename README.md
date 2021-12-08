@@ -442,9 +442,9 @@ Dessa forma, a função irá atender a diversos casos, pois poderá ser usada co
 [Back to Top](#refactoring-apis)
 
 ### Remove Flag Argument (344)
-Utilizar uma flag como argumento para decidir qual fluxo a função deve seguir sinaliza que a função faz mais de uma coisa.
+Utilizar uma flag como argumento para decidir qual fluxo a função deve seguir sinaliza que ela faz mais de uma coisa.
 
-Aplique para criar funções explícitas, que revelem a quem chama a sua verdadeira intenção.
+Aplique juntamente _Decompose Conditional_ para criar funções explícitas, que revelem a quem chama a sua verdadeira intenção.
 
 [Back to Top](#refactoring-apis)
 
