@@ -453,7 +453,8 @@ Aplique juntamente _Decompose Conditional_ para criar funções explícitas, que
 Segundo Fowler, ao trabalhar com parâmetros de funções que recebem valores derivados, é melhor ter o registro completo e deixar o corpo da função tratar da derivação.
 Dessa forma, será mais fácil caso queira pegar outros valores do mesmo registro no futuro.
 
-Além disso, Fowler defende que o principal motivo para não fazer essa refatoração é não querer depender do objeto completo, porém, isso é sinal de que a lógica deve ser movida para o próprio objeto.
+Além disso, Fowler defende que o principal motivo para não fazer essa refatoração é não querer depender do objeto completo, porém, 
+isso é sinal de que a lógica deve ser movida para o próprio objeto completo.
 
 [Back to Top](#refactoring-apis)
 
