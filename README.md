@@ -54,6 +54,7 @@
 * [Separate Query from Modifier(337)](#separate-query-from-modifier-337)
 * [Parameterize Function(340)](#parameterize-function-340)
 * [Remove Flag Argument(344)](#remove-flag-argument-344)
+* [Preserve Whole Object(349)](#preserve-whole-object-349)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -445,6 +446,14 @@ Dessa forma, a função irá atender a diversos casos, pois poderá ser usada co
 Utilizar uma flag como argumento para decidir qual fluxo a função deve seguir sinaliza que a função faz mais de uma coisa.
 
 Aplique juntamente _Decompose Conditional_ para criar funções explícitas, que revelem a quem chama a sua verdadeira intenção.
+
+[Back to Top](#refactoring-apis)
+
+### Preserve Whole Object (349)
+Sendo Fowler, ao trabalhar com parâmetros de funções que recebem valores derivados, é melhor ter o registro completo e deixar o corpo da função tratar da derivação.
+Dessa forma, será mais fácil caso queira pegar outros valores do mesmo registro.
+
+Além disso, Fowler defende que o principal motivo para não fazer essa refatoração é não querer depender do objeto completo. Porém, isso é sinal de que existe um objeto no objeto completo.
 
 [Back to Top](#refactoring-apis)
 
