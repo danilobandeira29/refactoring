@@ -55,6 +55,7 @@
 * [Parameterize Function(340)](#parameterize-function-340)
 * [Remove Flag Argument(344)](#remove-flag-argument-344)
 * [Preserve Whole Object(349)](#preserve-whole-object-349)
+* [Replace Parameter with Query(354)](#replace-parameter-with-query-354)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -455,6 +456,14 @@ Dessa forma, será mais fácil caso queira pegar outros valores do mesmo registr
 
 Além disso, Fowler defende que o principal motivo para não fazer essa refatoração é não querer depender do objeto completo, porém, 
 isso é sinal de que a lógica deve ser movida para o próprio objeto completo.
+
+[Back to Top](#refactoring-apis)
+
+### Replace Parameter with Query (354)
+"Se uma chamada de função passar um valor que a função possa facilmente determinar por conta própria, essa é uma forma de duplicação.".
+Isso faz com que quem chama a função tenha que determinar o parâmetro, quando poderia estar livre dessa tarefa, sendo essa a responsabilidade do corpo da função.
+
+O motivo mais comum para evitar essa refatoração é se com a remoção do parâmetro a função tenha uma dependência indesejada no seu corpo.
 
 [Back to Top](#refactoring-apis)
 
