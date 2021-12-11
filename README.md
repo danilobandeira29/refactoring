@@ -476,6 +476,7 @@ Inversa de _Replace Parameter with Query_.
 Utilize quando tiver a necessidade de remover do corpo da função uma dependência indesejada. Dessa forma, quem chama a função recebe a responsabilidade de fornecer o valor que antes era interno.
 
 Aplicando essa refatoração tenho a possibilidade de criar funções puras(transparência referencial), ou seja, sempre que eu chamar essa função passando os mesmos valores de parâmetros, terei o mesmo resultado.
+E com isso, facilito os testes e a compreensão do módulo.
 
 [Back to Top](#refactoring-apis)
 
