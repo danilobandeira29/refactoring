@@ -56,6 +56,7 @@
 * [Remove Flag Argument(344)](#remove-flag-argument-344)
 * [Preserve Whole Object(349)](#preserve-whole-object-349)
 * [Replace Parameter with Query(354)](#replace-parameter-with-query-354)
+* [Replace Query with Parameter(357)](#replace-query-with-parameter-357)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -460,10 +461,21 @@ isso é sinal de que a lógica deve ser movida para o próprio objeto completo.
 [Back to Top](#refactoring-apis)
 
 ### Replace Parameter with Query (354)
+Inversa de _Replace Query with Parameter_.
+
 "Se uma chamada de função passar um valor que a função possa facilmente determinar por conta própria, essa é uma forma de duplicação.".
 Isso faz com que quem chama a função tenha que determinar o parâmetro, quando poderia estar livre dessa tarefa, sendo essa a responsabilidade do corpo da função.
 
 O motivo mais comum para evitar essa refatoração é se com a remoção do parâmetro a função tenha uma dependência indesejada no seu corpo.
+
+[Back to Top](#refactoring-apis)
+
+### Replace Query with Parameter (357)
+Inversa de _Replace Parameter with Query_.
+
+Utilize quando tiver a necessidade de remover do corpo da função uma dependência indesejada. Dessa forma, quem chama a função recebe a responsabilidade de fornecer o valor que antes era interno.
+
+Aplicando essa refatoração tenho a possibilidade de criar funções puras(transparência referencial), ou seja, sempre que eu chamar essa função e passar os mesmos parâmetros, terei o mesmo resultado.
 
 [Back to Top](#refactoring-apis)
 
