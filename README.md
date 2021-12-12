@@ -57,6 +57,7 @@
 * [Preserve Whole Object(349)](#preserve-whole-object-349)
 * [Replace Parameter with Query(354)](#replace-parameter-with-query-354)
 * [Replace Query with Parameter(357)](#replace-query-with-parameter-357)
+* [Remove Setting Method(361)](#remove-setting-method-361)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -477,6 +478,12 @@ Utilize quando tiver a necessidade de remover do corpo da função uma dependên
 
 Aplicando essa refatoração tenho a possibilidade de criar funções puras(transparência referencial), ou seja, sempre que eu chamar essa função passando os mesmos valores de parâmetros, terei o mesmo resultado.
 E com isso facilito os testes e a compreensão do módulo.
+
+[Back to Top](#refactoring-apis)
+
+### Remove Setting Method (361)
+Utilizar quando quiser tornar campo(s) de uma classe imutável, sendo assim, o campo irá receber um valor apenas no constructor. 
+Caso algum cliente precise "alterar" o valor de um campo imutável, ele deverá instanciar um novo objeto.
 
 [Back to Top](#refactoring-apis)
 
