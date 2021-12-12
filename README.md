@@ -482,8 +482,8 @@ E com isso facilito os testes e a compreensão do módulo.
 [Back to Top](#refactoring-apis)
 
 ### Remove Setting Method (361)
-Utilizar quando quiser tornar campo(s) de uma classe imutável, sendo assim, o campo irá receber um valor apenas no constructor. 
-Caso algum cliente precise "alterar" o valor de um campo imutável, ele deverá instanciar um novo objeto.
+Utilizar quando não faz sentido alterar o valor de um campo após a instanciação. 
+Caso algum cliente precise "alterar" o valor de um campo que antes era feito com um setter(e agora é imutável), ele deverá instanciar um novo objeto.
 
 [Back to Top](#refactoring-apis)
 
