@@ -58,6 +58,7 @@
 * [Replace Parameter with Query(354)](#replace-parameter-with-query-354)
 * [Replace Query with Parameter(357)](#replace-query-with-parameter-357)
 * [Remove Setting Method(361)](#remove-setting-method-361)
+* [Replace Constructor with Factory Function(363)](#replace-constructor-with-factory-function-363)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -486,5 +487,9 @@ Utilizar quando não faz sentido alterar o valor de um campo após a instanciaç
 Caso algum cliente precise "alterar" o valor de um campo que antes era feito com um setter(e agora é imutável), ele deverá instanciar um novo objeto.
 
 [Back to Top](#refactoring-apis)
+
+### Replace Constructor with Factory Function (363)
+O método `constructor` em muitas linguagens orientadas a objeto possuem limitações onde, por exemplo, não é possível retornar uma subclasse. A função de factory serve para tirar algumas dessas limitações.
+Utilize quando necessitar criar um objeto de uma subclasse.
 
 Inspirado por: https://gist.github.com/cs-cordero/3799f26699bdecdb286fd719f08122af
