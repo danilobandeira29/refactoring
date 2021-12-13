@@ -492,4 +492,6 @@ Caso algum cliente precise "alterar" o valor de um campo que antes era feito com
 O método `constructor` em muitas linguagens orientadas a objeto possuem limitações onde, por exemplo, não é possível retornar uma subclasse. A função de factory serve para tirar algumas dessas limitações.
 Utilize quando precisar criar diferentes objetos. 
 
+[Back to Top](#refactoring-apis)
+
 Inspirado por: https://gist.github.com/cs-cordero/3799f26699bdecdb286fd719f08122af
