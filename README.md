@@ -490,6 +490,6 @@ Caso algum cliente precise "alterar" o valor de um campo que antes era feito com
 
 ### Replace Constructor with Factory Function (363)
 O método `constructor` em muitas linguagens orientadas a objeto possuem limitações onde, por exemplo, não é possível retornar uma subclasse. A função de factory serve para tirar algumas dessas limitações.
-Utilize quando necessitar criar um objeto de uma subclasse.
+Utilize quando precisar criar diferentes objetos. 
 
 Inspirado por: https://gist.github.com/cs-cordero/3799f26699bdecdb286fd719f08122af
