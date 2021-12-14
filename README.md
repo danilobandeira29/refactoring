@@ -59,6 +59,7 @@
 * [Replace Query with Parameter(357)](#replace-query-with-parameter-357)
 * [Remove Setting Method(361)](#remove-setting-method-361)
 * [Replace Constructor with Factory Function(363)](#replace-constructor-with-factory-function-363)
+* [Replace Function with Command(366)](#replace-function-with-command-366)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -491,6 +492,12 @@ Caso algum cliente precise "alterar" o valor de um campo que antes era feito com
 ### Replace Constructor with Factory Function (363)
 O método `constructor` em muitas linguagens orientadas a objeto possuem limitações onde, por exemplo, não é possível retornar uma subclasse. A função de factory serve para tirar algumas dessas limitações.
 Utilize quando precisar criar diferentes objetos. 
+
+[Back to Top](#refactoring-apis)
+
+### Replace Function with Command (366)
+Utilizar quando necessitar quebrar funções grandes e complexas. Com isso, será criado um `objeto de comando`(como Fowler chama), onde contém estado e realiza operações como `execute` e `undo`.
+Além disso, ganhando mais flexibilidade com uso de _inheritance_(herança) e _hooks_.
 
 [Back to Top](#refactoring-apis)
 
