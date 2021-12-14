@@ -496,8 +496,9 @@ Utilize quando precisar criar diferentes objetos.
 [Back to Top](#refactoring-apis)
 
 ### Replace Function with Command (366)
-Utilizar quando necessitar quebrar funções grandes e complexas. Com isso, será criado um `objeto de comando`(como Fowler chama), onde contém estado e realiza operações como `execute` e `undo`.
-Além disso, ganhando mais flexibilidade com uso de _inheritance_(herança) e _hooks_.
+Utilizar quando necessitar quebrar uma função grande e complexa em pequena e simples. 
+Com isso, será criado um `objeto de comando`(como Fowler chama), onde o seu propósito será requisição e execução. Um `objeto de comando` contém estado e realiza operações como `execute` e `undo`,
+além de ganhar mais flexibilidade, pois permitirá uso de _inheritance_(herança) e _hooks_.
 
 [Back to Top](#refactoring-apis)
 
