@@ -60,6 +60,7 @@
 * [Remove Setting Method(361)](#remove-setting-method-361)
 * [Replace Constructor with Factory Function(363)](#replace-constructor-with-factory-function-363)
 * [Replace Function with Command(366)](#replace-function-with-command-366)
+* [Replace Command with Function(373)](#replace-command-with-function-373)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -496,9 +497,18 @@ Utilize quando precisar criar diferentes objetos.
 [Back to Top](#refactoring-apis)
 
 ### Replace Function with Command (366)
+Inversa de _Replace Command with Function_.
+
 Utilizar quando necessitar quebrar uma função grande e complexa em pequena e simples. 
 Com isso, será criado um `objeto de comando`(como Fowler chama), onde o seu propósito será requisição e execução. Um `objeto de comando` contém estado e realiza operações como `execute` e `undo`,
 além de ganhar mais flexibilidade, pois permitirá uso de _inheritance_(herança) e _hooks_.
+
+[Back to Top](#refactoring-apis)
+
+### Replace Command with Function (373)
+Inversa de _Replace Function with Command_.
+
+Utilizar quando o Command executar algo simples. Uma função já é o suficiente para realizar uma tarefa pequena e simples.
 
 [Back to Top](#refactoring-apis)
 
