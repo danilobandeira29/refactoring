@@ -508,7 +508,7 @@ além de ganhar mais flexibilidade, pois permitirá uso de _inheritance_(heranç
 ### Replace Command with Function (373)
 Inversa de _Replace Function with Command_.
 
-Utilizar quando o Command executar algo simples. Uma função já é o suficiente para realizar uma tarefa pequena e simples.
+Utilizar quando o _Command_ executar algo pequeno e simples. Uma função já é o suficiente para realizar tal tarefa. 
 
 [Back to Top](#refactoring-apis)
 
