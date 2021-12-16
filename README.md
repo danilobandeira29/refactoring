@@ -62,6 +62,9 @@
 * [Replace Function with Command(366)](#replace-function-with-command-366)
 * [Replace Command with Function(373)](#replace-command-with-function-373)
 
+## Dealing with Inheritance 
+* [Pull Up Method(378)](#pull-up-method-378)
+
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
 Se voce investe tempo para tentar entender o que um bloco de código faz, transforme-o numa função com um nome que descreva o seu comportamento.
@@ -511,5 +514,16 @@ Inversa de _Replace Function with Command_.
 Utilizar quando o _Command_ executar algo pequeno e simples. Uma função já é o suficiente para realizar tal tarefa. 
 
 [Back to Top](#refactoring-apis)
+
+### Pull Up Method (378)
+Inversa de _Push Down Method_.
+
+Utilizar quando subclasses possuem duplicação no código. O ideal em casos de herança é que o comportamento comum fique na _superclass_,
+enquanto os detalhes fiquem na _subclass_.
+
+Existem casos onde esta refatoração é antecedida por outras, como _Parameterize Function_ quando duas funções são muitos parecidas e ao serem alteradas serão 
+essencialmente a mesma função, ou _Pull Up Field_ quando o corpo da função duplicada referenciar um campo da _subclass_.
+
+[Back to Top](#dealing-with-inheritance)
 
 Inspirado por: https://gist.github.com/cs-cordero/3799f26699bdecdb286fd719f08122af
