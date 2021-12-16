@@ -518,7 +518,7 @@ Utilizar quando o _Command_ executar algo pequeno e simples. Uma função já é
 ### Pull Up Method (378)
 Inversa de _Push Down Method_.
 
-Utilizar quando subclasses possuem duplicação no código. O ideal em casos de herança é que o comportamento comum fique na _superclass_,
+Utilizar quando subclasses possuem duplicação no código. O ideal em casos de herança é que comportamento em comum fique na _superclass_,
 enquanto os detalhes fiquem na _subclass_.
 
 Existem casos onde esta refatoração é antecedida por outras, como _Parameterize Function_ quando duas funções são muitos parecidas e ao serem alteradas serão 
