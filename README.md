@@ -64,6 +64,7 @@
 
 ## Dealing with Inheritance 
 * [Pull Up Method(378)](#pull-up-method-378)
+* [Pull Up Field(381)](#pull-up-field-381)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -523,6 +524,16 @@ enquanto os detalhes fiquem na _subclass_.
 
 Existem casos onde esta refatoração é antecedida por outras, como _Parameterize Function_ quando duas funções são muitos parecidas e ao serem alteradas serão 
 essencialmente a mesma função, ou _Pull Up Field_ quando o corpo da função duplicada referenciar um campo da _subclass_.
+
+[Back to Top](#dealing-with-inheritance)
+
+### Pull Up Field (381)
+Inversa de _Push Down Field_.
+
+Utilizar quando subclasses possuem duplicação nos campos. Às vezes, os campos não possuem o mesmo nome, mas funcionam da mesma maneira.
+
+Ao aplicar esta refatoração as duplicações são reduzidas de duas formas, tanto no campo quanto nos métodos que utilizam esse campo, 
+pois serão movidos para a _superclass_.
 
 [Back to Top](#dealing-with-inheritance)
 
