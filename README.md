@@ -530,7 +530,7 @@ essencialmente a mesma função, ou _Pull Up Field_ quando o corpo da função d
 ### Pull Up Field (381)
 Inversa de _Push Down Field_.
 
-Utilizar quando subclasses possuem duplicação nos campos. Às vezes, os campos não possuem o mesmo nome, mas funcionam da mesma maneira.
+Utilizar quando subclasses possuem duplicação nos campos.
 
 Ao aplicar esta refatoração as duplicações são reduzidas de duas formas, tanto no campo quanto nos métodos que utilizam esse campo, 
 pois serão movidos para a _superclass_.
