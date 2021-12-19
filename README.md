@@ -67,6 +67,7 @@
 * [Pull Up Field(381)](#pull-up-field-381)
 * [Pull Up Constructor Body(383)](#pull-up-constructor-body-383)
 * [Push Down Method(387)](#push-down-method-387)
+* [Push Down Field(388)](#push-down-field-388)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -549,7 +550,14 @@ Utilizar quando possuir comportamento em comum no construtor das subclasses. Cha
 ### Push Down Method (387)
 Inversa de _Pull Up Method_.
 
-Utilizar quando um método de uma _superclass_ é relevante apenas para uma _subclass_.
+Utilizar quando um método de uma _superclass_ for relevante apenas para uma _subclass_.
+
+[Back to Top](#dealing-with-inheritance)
+
+### Push Down Field (388)
+Inversa de _Pull Up Field_.
+
+Utilizar quando um campo de uma _superclass_ for relevante apenas para uma _subclass_.
 
 [Back to Top](#dealing-with-inheritance)
 
