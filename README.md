@@ -65,6 +65,7 @@
 ## Dealing with Inheritance 
 * [Pull Up Method(378)](#pull-up-method-378)
 * [Pull Up Field(381)](#pull-up-field-381)
+* [Pull Up Constructor Body(383)](#pull-up-constructor-body-383)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -534,6 +535,13 @@ Utilizar quando subclasses possuem duplicação nos campos.
 
 Ao aplicar esta refatoração as duplicações são reduzidas de duas formas, tanto no campo quanto nos métodos que utilizam esse campo, 
 pois serão movidos para a _superclass_.
+
+[Back to Top](#dealing-with-inheritance)
+
+### Pull Up Constructor Body (383)
+Semelhante a _Pull Up Method_.
+
+Utilizar quando possuir duplicação em comum no construtor das subclasses. Chamar o `super()`(JavaScript) e jogar a duplicação na _superclass_.
 
 [Back to Top](#dealing-with-inheritance)
 
