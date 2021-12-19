@@ -549,7 +549,7 @@ Utilizar quando possuir comportamento em comum no construtor das subclasses. Cha
 ### Push Down Method (387)
 Inversa de _Pull Up Method_.
 
-Utilizar quando um método é relevante apenas para uma _subclass_.
+Utilizar quando um método de uma _superclass_ é relevante apenas para uma _subclass_.
 
 [Back to Top](#dealing-with-inheritance)
 
