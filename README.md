@@ -541,7 +541,7 @@ pois serão movidos para a _superclass_.
 ### Pull Up Constructor Body (383)
 Semelhante a _Pull Up Method_.
 
-Utilizar quando possuir duplicação em comum no construtor das subclasses. Chamar o `super()`(JavaScript) e jogar a duplicação na _superclass_.
+Utilizar quando possuir comportamento em comum no construtor das subclasses. Chamar o `super()`(JavaScript) e jogar a duplicação na _superclass_.
 
 [Back to Top](#dealing-with-inheritance)
 
