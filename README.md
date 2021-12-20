@@ -567,7 +567,8 @@ Inversa de _Remove Subclass_.
 
 Utilizar quando tiver uma propriedade que classifica o "tipo" de um _item_, como código de tipo de _employee_(_engineer_, _manager_, _salesman_).
 
-Existe um caso especial onde não posso utilizar _subclasses_ se o código de tipo for mutável ou se precisar do código de tipo para outras tarefas.
+Existe um caso especial onde não posso utilizar _subclasses_(herança direta) se o código de tipo for mutável ou se precisar do código de tipo para outras tarefas.
+Nesse caso, devo utilizar herança indireta.
 
 [Back to Top](#dealing-with-inheritance)
 
