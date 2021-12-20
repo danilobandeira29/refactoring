@@ -68,6 +68,7 @@
 * [Pull Up Constructor Body(383)](#pull-up-constructor-body-383)
 * [Push Down Method(387)](#push-down-method-387)
 * [Push Down Field(388)](#push-down-field-388)
+* [Replace Type Code with Subclasses(389)](#replace-type-code-with-subclasses-389)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -558,6 +559,15 @@ Utilizar quando um método de uma _superclass_ for relevante apenas para uma _su
 Inversa de _Pull Up Field_.
 
 Utilizar quando um campo de uma _superclass_ for relevante apenas para uma _subclass_.
+
+[Back to Top](#dealing-with-inheritance)
+
+### Replace Type Code with Subclasses (389)
+Inversa de _Remove Subclass_.
+
+Utilizar quando tiver uma propriedade que classifica o "tipo" de um _item_, como código de tipo de _employee_(_engineer_, _manager_, _salesman_).
+
+Existe um caso especial onde não posso utilizar _subclasses_ se o código de tipo for mutável ou se precisar do código de tipo para outras tarefas.
 
 [Back to Top](#dealing-with-inheritance)
 
