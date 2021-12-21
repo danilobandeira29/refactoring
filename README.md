@@ -69,6 +69,7 @@
 * [Push Down Method(387)](#push-down-method-387)
 * [Push Down Field(388)](#push-down-field-388)
 * [Replace Type Code with Subclasses(389)](#replace-type-code-with-subclasses-389)
+* [Remove Subclass(397)](#remove-subclass-397)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -569,6 +570,18 @@ Utilizar quando tiver uma propriedade que classifica o "tipo" de um _item_, como
 
 Existe um caso especial onde não posso utilizar _subclasses_(herança direta) se o código de tipo for mutável ou se precisar do código de tipo para outras tarefas.
 Nesse caso, devo utilizar herança indireta.
+
+[Back to Top](#dealing-with-inheritance)
+
+### Remove Subclass (397)
+Inversa de _Replace Type Code with Subclasses_.
+
+Subclasses são úteis quando precisar de diferentes objetos, por exemplo, _employee_(_engineer_, _manager_, _salesman_), e/ou comportamento polimórfico.
+
+Utilize para remover _subclass_ e acrescentar um campo na _superclass_.
+
+Uma dica valiosa dada por Fowler é: `sempre que quero mudar o modo de representar algo, procuro primeiro encapsular a representação atual a fim
+de minimizar o impacto em qualquer código de cliente.`
 
 [Back to Top](#dealing-with-inheritance)
 
