@@ -577,8 +577,9 @@ Nesse caso, devo utilizar herança indireta.
 Inversa de _Replace Type Code with Subclasses_.
 
 Subclasses são úteis quando precisar de diferentes objetos, por exemplo, _employee_(_engineer_, _manager_, _salesman_), e/ou comportamento polimórfico.
+Entretanto, em alguns casos uma _subclass_ não faz muito e não valerá a pena tê-la.
 
-Utilize para remover _subclass_, e substituir com um campo na _superclass_.
+Utilize para remover _subclass_, e substitui-la com um campo na _superclass_.
 
 Uma dica valiosa dada por Fowler é: `sempre que quero mudar o modo de representar algo, procuro primeiro encapsular a representação atual a fim
 de minimizar o impacto em qualquer código de cliente.`
