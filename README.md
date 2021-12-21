@@ -578,7 +578,7 @@ Inversa de _Replace Type Code with Subclasses_.
 
 Subclasses são úteis quando precisar de diferentes objetos, por exemplo, _employee_(_engineer_, _manager_, _salesman_), e/ou comportamento polimórfico.
 
-Utilize para remover _subclass_ e acrescentar um campo na _superclass_.
+Utilize para remover _subclass_, e substituir com um campo na _superclass_.
 
 Uma dica valiosa dada por Fowler é: `sempre que quero mudar o modo de representar algo, procuro primeiro encapsular a representação atual a fim
 de minimizar o impacto em qualquer código de cliente.`
