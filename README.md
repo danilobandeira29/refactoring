@@ -588,7 +588,7 @@ de minimizar o impacto em qualquer código de cliente.`
 [Back to Top](#dealing-with-inheritance)
 
 ### Extract Superclass (402)
-Utilizar quando classes fizerem tarefas parecidas, onde as semelhanças irão ficar na _superclass_.
+Utilizar quando classes fizerem tarefas parecidas, utilizar herança para extrair as semelhanças e inseri-las em uma _superclass_.
 
 [Back to Top](#dealing-with-inheritance)
 
