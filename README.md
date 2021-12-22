@@ -70,6 +70,7 @@
 * [Push Down Field(388)](#push-down-field-388)
 * [Replace Type Code with Subclasses(389)](#replace-type-code-with-subclasses-389)
 * [Remove Subclass(397)](#remove-subclass-397)
+* [Extract Superclass(402)](#extract-superclass-402)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -583,6 +584,11 @@ Utilize para remover _subclass_, e substitui-la com um campo na _superclass_.
 
 Uma dica valiosa dada por Fowler é: `sempre que quero mudar o modo de representar algo, procuro primeiro encapsular a representação atual a fim
 de minimizar o impacto em qualquer código de cliente.`
+
+[Back to Top](#dealing-with-inheritance)
+
+### Extract Superclass (402)
+Utilizar quando classes fizerem tarefas parecidas, onde as semelhanças irão ficar na _superclass_.
 
 [Back to Top](#dealing-with-inheritance)
 
