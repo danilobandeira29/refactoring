@@ -71,6 +71,7 @@
 * [Replace Type Code with Subclasses(389)](#replace-type-code-with-subclasses-389)
 * [Remove Subclass(397)](#remove-subclass-397)
 * [Extract Superclass(402)](#extract-superclass-402)
+* [Collapse Hierarchy(408)](#collapse-hierarchy-408)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -589,6 +590,11 @@ de minimizar o impacto em qualquer código de cliente.`
 
 ### Extract Superclass (402)
 Utilizar quando classes fizerem tarefas parecidas, aplicar herança para extrair as semelhanças e inseri-las em uma _superclass_.
+
+[Back to Top](#dealing-with-inheritance)
+
+### Collapse Hierarchy (408)
+Utilizar quando uma _subclass_ não for mais tão diferente da _superclass_, então combine-as numa única classe.
 
 [Back to Top](#dealing-with-inheritance)
 
