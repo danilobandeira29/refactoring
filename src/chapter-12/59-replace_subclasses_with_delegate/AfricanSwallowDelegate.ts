@@ -1,11 +1,15 @@
+import Bird from "./Bird";
+import SpeciesDelegate from "./SpeciesDelegate";
+
 export interface AfricanSwallowDelegateDto {
     numberOfCoconuts: number;
 }
 
-export default class AfricanSwallowDelegate {
+export default class AfricanSwallowDelegate extends SpeciesDelegate {
     private readonly _numberOfCoconuts: number;
 
-    constructor(dto: { numberOfCoconuts: number }) {
+    constructor(dto: AfricanSwallowDelegateDto, bird: Bird) {
+        super({ props: dto, bird });
         this._numberOfCoconuts = dto.numberOfCoconuts;
     }
 
