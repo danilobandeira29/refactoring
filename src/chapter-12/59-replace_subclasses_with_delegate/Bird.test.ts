@@ -1,4 +1,3 @@
-import NorwegianBlueParrot from "./NorwegianBlueParrot";
 import Bird from "./Bird";
 
 describe("Bird SUITE", function() {
@@ -11,18 +10,18 @@ describe("Bird SUITE", function() {
     });
 
     test("should calculate airSpeedVelocity of a NorwegianBlueParrot with nail", function() {
-        expect(new NorwegianBlueParrot({ name: "NorwegianBlueParrot", voltage: 4, isNailed: true }).airSpeedVelocity).toEqual(0);
+        expect(new Bird({ name: "NorwegianBlueParrot", type: "NorwegianBlueParrot", voltage: 4, isNailed: true }).airSpeedVelocity).toEqual(0);
     });
 
     test("should calculate airSpeedVelocity of a NorwegianBlueParrot without nail", function() {
-        expect(new NorwegianBlueParrot({ name: "NorwegianBlueParrot", voltage: 4, isNailed: false }).airSpeedVelocity).toEqual(10.4);
+        expect(new Bird({ name: "NorwegianBlueParrot", type:"NorwegianBlueParrot", voltage: 4, isNailed: false }).airSpeedVelocity).toEqual(10.4);
     });
 
     test("should plumage of a NorwegianBlueParrot be beautiful because the voltage is lower then 100", function() {
-        expect(new NorwegianBlueParrot({ name: "NorwegianBlueParrot", voltage: 100, isNailed: false }).plumage).toEqual("beautiful");
+        expect(new Bird({ name: "NorwegianBlueParrot", type: "NorwegianBlueParrot", voltage: 100, isNailed: false }).plumage).toEqual("beautiful");
     });
 
     test("should plumage of a NorwegianBlueParrot be beautiful because the voltage is greater then 100", function() {
-        expect(new NorwegianBlueParrot({ name: "NorwegianBlueParrot", voltage: 101, isNailed: false }).plumage).toEqual("scorched");
+        expect(new Bird({ name: "NorwegianBlueParrot", type: "NorwegianBlueParrot", voltage: 101, isNailed: false }).plumage).toEqual("scorched");
     });
 });
