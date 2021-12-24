@@ -72,6 +72,7 @@
 * [Remove Subclass(397)](#remove-subclass-397)
 * [Extract Superclass(402)](#extract-superclass-402)
 * [Collapse Hierarchy(408)](#collapse-hierarchy-408)
+* [Replace Subclass with Delegate(409)](#replace-subclass-with-delegate-409)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -595,6 +596,18 @@ Utilizar quando classes fizerem tarefas parecidas, aplicar herança para extrair
 
 ### Collapse Hierarchy (408)
 Utilizar quando uma _subclass_ não for mais tão diferente da _superclass_, então combine-as numa única classe.
+
+[Back to Top](#dealing-with-inheritance)
+
+### Replace Subclass with Delegate (409)
+Segundo Fowler, uma das desvantagens de utilizar herança é que ela pode só ser usada uma vez, num único eixo de variação.
+Exemplo: posso variar comportamento conforme a categoria idade e nível de renda de uma pessoa, 
+então poderei ter subclasses para jovens e idosos, ou para ricos e pobres, mas não para ambos.
+Outra desvantagem de herança é que existirá um relacionamento íntimo entre as classes, então qualquer 
+alteração na _superclass_ poderá causar erros nas _subclasses_. É possível resolver ambos os problemas com Delegação.
+
+Fowler também diz que essa refatoração é basicamente `Composition over inheritance`(_gang of four_) onde `delegate `é o mesmo que `composition`.
+E finaliza com a frase de efeito: `Prefira uma mistura criteriosa de composição e herança a usar somente uma delas`.
 
 [Back to Top](#dealing-with-inheritance)
 
