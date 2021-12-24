@@ -1,7 +1,7 @@
 import EuropeanSwallowDelegate from "./EuropeanSwallowDelegate";
 import AfricanSwallowDelegate, {AfricanSwallowDelegateDto} from "./AfricanSwallowDelegate";
 import NorwegianBlueParrotDelegate, {NorwegianBlueParrotDelegateDto} from "./NorwegianBlueParrotDelegate";
-import SpeciesDelegateImpl from "./SpeciesDelegate";
+import SpeciesDelegate from "./SpeciesDelegate";
 
 export interface BirdDto {
     name: string;
@@ -11,8 +11,6 @@ export interface BirdDto {
     voltage?: number;
     isNailed?: boolean;
 }
-
-type SpeciesDelegate = EuropeanSwallowDelegate | AfricanSwallowDelegate | NorwegianBlueParrotDelegate | SpeciesDelegateImpl ;
 
 export default class Bird {
     readonly _name: string;
@@ -46,7 +44,7 @@ export default class Bird {
             case "NorwegianBlueParrot":
                 return new NorwegianBlueParrotDelegate(dto as NorwegianBlueParrotDelegateDto, this);
             default:
-                return new SpeciesDelegateImpl({ props: dto, bird: this });
+                return new SpeciesDelegate({ props: dto, bird: this });
         }
     }
 }
