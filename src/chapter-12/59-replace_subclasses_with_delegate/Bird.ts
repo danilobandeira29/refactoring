@@ -17,7 +17,7 @@ type SpeciesDelegate = EuropeanSwallowDelegate | AfricanSwallowDelegate | Norweg
 export default class Bird {
     readonly name: string;
     readonly _plumage: string;
-    readonly speciesDelegate: SpeciesDelegate;
+    private readonly speciesDelegate: SpeciesDelegate;
 
     constructor(dto: BirdDto) {
         this.name = dto.name;
