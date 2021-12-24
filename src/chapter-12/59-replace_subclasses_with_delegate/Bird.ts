@@ -40,7 +40,7 @@ export default class Bird {
     private selectSpeciesDelegate(dto: BirdDto): SpeciesDelegate {
         switch(dto.type) {
             case "EuropeanSwallow":
-                return new EuropeanSwallowDelegate(this);
+                return new EuropeanSwallowDelegate(dto, this);
             case "AfricanSwallow":
                 return new AfricanSwallowDelegate(dto as AfricanSwallowDelegateDto, this);
             case "NorwegianBlueParrot":

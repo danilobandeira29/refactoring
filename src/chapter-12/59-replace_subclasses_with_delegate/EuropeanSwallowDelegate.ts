@@ -1,9 +1,9 @@
-import Bird from "./Bird";
+import Bird, {BirdDto} from "./Bird";
 import SpeciesDelegate from "./SpeciesDelegate";
 
 export default class EuropeanSwallowDelegate extends SpeciesDelegate {
-    constructor(bird: Bird) {
-        super({ bird });
+    constructor(dto: BirdDto, bird: Bird) {
+        super({ props: dto, bird });
     }
 
     get airSpeedVelocity(): number | null {
