@@ -15,14 +15,18 @@ export interface BirdDto {
 type SpeciesDelegate = EuropeanSwallowDelegate | AfricanSwallowDelegate | NorwegianBlueParrotDelegate | SpeciesDelegateImpl ;
 
 export default class Bird {
-    readonly name: string;
+    readonly _name: string;
     readonly _plumage: string;
     private readonly speciesDelegate: SpeciesDelegate;
 
     constructor(dto: BirdDto) {
-        this.name = dto.name;
+        this._name = dto.name;
         this._plumage = dto.plumage || "average";
         this.speciesDelegate = this.selectSpeciesDelegate(dto);
+    }
+
+    get name(): string {
+        return this._name;
     }
 
     get plumage(): string {
