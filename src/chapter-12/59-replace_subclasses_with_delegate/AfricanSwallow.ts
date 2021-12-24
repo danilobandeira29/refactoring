@@ -1,6 +1,6 @@
 import Bird, {BirdDto} from "./Bird";
 
-interface AfricanSwallowDto extends BirdDto {
+export interface AfricanSwallowDto extends BirdDto {
     numberOfCoconuts: number;
 }
 

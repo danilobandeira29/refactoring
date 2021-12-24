@@ -1,6 +1,6 @@
 import Bird, {BirdDto} from "./Bird";
 
-interface NorwegianBlueParrotDto extends BirdDto {
+export interface NorwegianBlueParrotDto extends BirdDto {
     voltage: number;
     isNailed: boolean;
 }
