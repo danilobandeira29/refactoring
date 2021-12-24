@@ -604,9 +604,9 @@ Segundo Fowler, uma das desvantagens de utilizar herança é que ela pode só se
 Exemplo: posso variar comportamento das pessoas de acordo a categoria idade e o nível de renda, 
 poderei ter subclasses para jovens e idosos, ou para ricos e pobres, mas não para ambos.
 Outra desvantagem de herança é que existirá um relacionamento íntimo entre as classes, então qualquer 
-alteração na _superclass_ poderá causar erros nas _subclasses_. É possível resolver ambos os problemas com Delegação.
+alteração na _superclass_ poderá causar erros nas _subclasses_. É possível resolver ambos os problemas com delegação. 
 
-Fowler também diz que essa refatoração é basicamente `Composition over inheritance`(_gang of four_) onde `delegate `é o mesmo que `composition`.
+Fowler também diz que essa refatoração é basicamente `Composition over inheritance`(_gang of four_) onde delegação é o mesmo que `composition`.
 E finaliza com a frase de efeito: `Prefira uma mistura criteriosa de composição e herança a usar somente uma delas`.
 
 [Back to Top](#dealing-with-inheritance)
