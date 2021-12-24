@@ -4,6 +4,8 @@ export interface BirdDto {
 }
 
 export default class Bird {
+    // já existem subclasses de Bird
+    // problema é que agora será necessário ter variações de Bird, como WildBird(silvestre) e CaptiveBird(cativeiro).
     private readonly _name: string;
     private readonly _plumage: string;
 
