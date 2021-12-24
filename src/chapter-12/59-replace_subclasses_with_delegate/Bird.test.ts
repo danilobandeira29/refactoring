@@ -1,10 +1,10 @@
-import EuropeanSwallow from "./EuropeanSwallow";
 import AfricanSwallow from "./AfricanSwallow";
 import NorwegianBlueParrot from "./NorwegianBlueParrot";
+import Bird from "./Bird";
 
 describe("Bird SUITE", function() {
     test("should calculate airSpeedVelocity of an EuropeanSwallow", function() {
-        expect(new EuropeanSwallow({ name: "EuropeanSwallow" }).airSpeedVelocity).toEqual(35);
+        expect(new Bird({ name: "EuropeanSwallow", type: "EuropeanSwallow" }).airSpeedVelocity).toEqual(35);
     });
 
     test("should calculate airSpeedVelocity of an AfricanSwallow", function() {

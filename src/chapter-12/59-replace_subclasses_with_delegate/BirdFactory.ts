@@ -1,5 +1,4 @@
 import Bird, {BirdDto} from "./Bird";
-import EuropeanSwallow from "./EuropeanSwallow";
 import AfricanSwallow, {AfricanSwallowDto} from "./AfricanSwallow";
 import NorwegianBlueParrot, {NorwegianBlueParrotDto} from "./NorwegianBlueParrot";
 
@@ -11,8 +10,6 @@ type CreateBirdDto = Birds & {
 
 export default function createBird(dto: CreateBirdDto): Bird {
     switch (dto.type) {
-        case "EuropeanSwallow" :
-            return new EuropeanSwallow(dto);
         case "AfricanSwallow":
             return new AfricanSwallow(dto as AfricanSwallowDto);
         case "NorwegianBlueParrot":

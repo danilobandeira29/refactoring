@@ -1,12 +1,8 @@
-import EuropeanSwallow from "./EuropeanSwallow";
 import createBird from "./BirdFactory";
 import AfricanSwallow from "./AfricanSwallow";
 import NorwegianBlueParrot from "./NorwegianBlueParrot";
 
 describe("Bird Factory Suite", function() {
-    test("should create EuropeanSwallow", function() {
-        expect(createBird({ name: "EuropeanSwallow", type: "EuropeanSwallow" })).toBeInstanceOf(EuropeanSwallow);
-    });
 
     test("should create AfricanSwallow", function() {
         expect(createBird({ name: "AfricanSwallow", type: "AfricanSwallow", numberOfCoconuts: 4 })).toBeInstanceOf(AfricanSwallow);
