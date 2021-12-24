@@ -601,8 +601,8 @@ Utilizar quando uma _subclass_ não for mais tão diferente da _superclass_, ent
 
 ### Replace Subclass with Delegate (409)
 Segundo Fowler, uma das desvantagens de utilizar herança é que ela pode só ser usada uma vez, num único eixo de variação.
-Exemplo: posso variar comportamento conforme a categoria idade e nível de renda de uma pessoa, 
-então poderei ter subclasses para jovens e idosos, ou para ricos e pobres, mas não para ambos.
+Exemplo: posso variar comportamento das pessoas de acordo a categoria idade e o nível de renda, 
+poderei ter subclasses para jovens e idosos, ou para ricos e pobres, mas não para ambos.
 Outra desvantagem de herança é que existirá um relacionamento íntimo entre as classes, então qualquer 
 alteração na _superclass_ poderá causar erros nas _subclasses_. É possível resolver ambos os problemas com Delegação.
 
