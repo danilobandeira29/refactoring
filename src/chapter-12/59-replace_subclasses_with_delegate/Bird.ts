@@ -1,15 +1,17 @@
 import EuropeanSwallowDelegate from "./EuropeanSwallowDelegate";
+import AfricanSwallowDelegate, {AfricanSwallowDelegateDto} from "./AfricanSwallowDelegate";
 
 export interface BirdDto {
     name: string;
     plumage?: string;
     type?: string;
+    numberOfCoconuts?: number;
 }
 
 export default class Bird {
     private readonly _name: string;
     private readonly _plumage: string;
-    readonly speciesDelegate: EuropeanSwallowDelegate | null;
+    readonly speciesDelegate: EuropeanSwallowDelegate | AfricanSwallowDelegate | null;
 
     constructor(dto: BirdDto) {
         this._name = dto.name;
@@ -29,6 +31,8 @@ export default class Bird {
         switch(dto.type) {
             case "EuropeanSwallow":
                 return new EuropeanSwallowDelegate();
+            case "AfricanSwallow":
+                return new AfricanSwallowDelegate(dto as AfricanSwallowDelegateDto);
             default: return null;
         }
     }
