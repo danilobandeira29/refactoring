@@ -73,6 +73,7 @@
 * [Extract Superclass(402)](#extract-superclass-402)
 * [Collapse Hierarchy(408)](#collapse-hierarchy-408)
 * [Replace Subclass with Delegate(409)](#replace-subclass-with-delegate-409)
+* [Replace Superclass with Delegate(429)](#replace-superclass-with-delegate-429)
 
 ### Extract Function (134)
 Use quando funções são longas. Código usado mais do que uma vez merece a sua própria função.
@@ -608,6 +609,15 @@ alteração na _superclass_ poderá causar erros nas _subclasses_. É possível 
 
 Fowler também diz que essa refatoração é basicamente `Composition over inheritance`(_gang of four_) onde delegação é o mesmo que `composition`.
 E finaliza com a frase de efeito: `Prefira uma mistura criteriosa de composição e herança a usar somente uma delas`.
+
+[Back to Top](#dealing-with-inheritance)
+
+### Replace Superclass with Delegate (429)
+Para todas as funções da _superclass_, deve ser verdade que toda instância da _subclass_ é uma instância da _superclass_,
+e ela deve ser um objeto válido em todos os casos em que estivermos usando a _superclass_.
+Se as funções da _superclass_ não fazem sentido na _subclass_, é sinal de que não deveria utilizar herança para ter funcionalidades da _superclass_.
+Nesse caso, o mais interessante seria instanciar a _superclass_ dentro da _subclass_ e criar métodos de delegação, dessa forma,
+será possível utilizar alguns dos métodos que se fazem necessários na _subclass_.
 
 [Back to Top](#dealing-with-inheritance)
 
