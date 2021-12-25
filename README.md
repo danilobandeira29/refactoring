@@ -615,6 +615,7 @@ E finaliza com a frase de efeito: `Prefira uma mistura criteriosa de composiçã
 ### Replace Superclass with Delegate (429)
 Além de usar todas as funções da _superclass_, também deve ser verdade que toda instância da _subclass_ é uma instância da _superclass_,
 e ela deve ser um objeto válido em todos os casos em que estivermos usando a _superclass_.
+
 Se as funções da _superclass_ não fazem sentido na _subclass_, é sinal de que não deveria utilizar herança para ter funcionalidades da _superclass_.
 Nesse caso, o mais interessante seria instanciar a _superclass_ dentro da _subclass_ e criar métodos de delegação, dessa forma,
 será possível utilizar alguns dos métodos da _superclass_ que se fazem necessários na _subclass_.
